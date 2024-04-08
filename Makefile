@@ -28,7 +28,4 @@ $(BUILD_DIR)/%.cc.o: %.cc
 
 .PHONY: clean
 clean:
-	rm $(BUILD_DIR)/src/*
 	rm $(BIN_DIR)/tests/*
-
--include $(DEPS)

@@ -1,10 +1,14 @@
 #include <assert.h>
 #include <stdio.h>
+
 #include "Threadpool.h"
+#include "Log.h"
 
 const int ThreadPool::INIT_NUM;
 const int ThreadPool::MAX_NUM;
 const int ThreadPool::MAX_IDLE_TIME_SECOND;
+
+static Logger& logger = Logger::get_instance();
 
 ThreadPool::ThreadPool(int initNum, int maxNum, int idleSec)
     : _initNum(initNum)
@@ -70,13 +74,14 @@ void ThreadPool::AddTask(const TaskType& task, void* arg) {
 void ThreadPool::PoolGrow() {
     int busy = _busyCount.load();
     int threadCount = _threadCount.load();
-    printf("const: %d, busy: %d\n", threadCount, busy);
+    // printf("const: %d, busy: %d\n", threadCount, busy);
     if(threadCount == busy) {
         if(threadCount < _maxNum) {
             for(int i = 0; i < _maxNum; ++i) {
                 if(_pool[i] == nullptr) {
                     _pool[i] = new std::thread(&ThreadPool::ThreadRoutine, this, i);
-                    printf("add thread[%d]\n", i);
+                    // printf("add thread[%d]\n", i);
+                    logger.log(INFO, "add thread");
                     ++_threadCount;
                     break;
                 }
@@ -106,7 +111,8 @@ void ThreadPool::ThreadRoutine(int index) {
                     delete _pool[index];
                     _pool[index] = nullptr;
                     --_threadCount;
-                    printf("thread[%d] exit\n", index);
+                    // printf("thread[%d] exit\n", index);
+                    logger.log(INFO, "thread exit");
                     break;
                 }
             }

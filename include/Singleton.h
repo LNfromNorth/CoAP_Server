@@ -9,13 +9,13 @@ public:
         return instance;
     }
     virtual ~Singleton() noexcept{
-        std::cout << "destructor called!" << std::endl;
+        // std::cout << "destructor called!" << std::endl;
     }
     Singleton(const Singleton&) = delete;
     Singleton& operator = (const Singleton&) = delete;
 protected:
     Singleton() {
-        std::cout << "constructor called!" << std::endl;
+        // std::cout << "constructor called!" << std::endl;
     }
 };
 
