@@ -68,3 +68,116 @@
 [2024-02-02 19:42:34][ERROR   ]: hello
 [2024-02-02 19:42:34][DEBUG   ]: hello
 [2024-04-08 12:11:34][INFO    ]: get the wrong num of threadpool, set as default
+[2024-04-09 10:27:09][DEBUG   ]: receive message
+[2024-04-09 10:27:15][DEBUG   ]: receive message
+[2024-04-09 10:27:16][DEBUG   ]: receive message
+[2024-04-09 10:38:28][DEBUG   ]: receive message
+[2024-04-09 10:38:31][DEBUG   ]: receive message
+[2024-04-09 10:38:32][DEBUG   ]: receive message
+[2024-04-09 10:38:33][DEBUG   ]: receive message
+[2024-04-09 10:38:34][DEBUG   ]: receive message
+[2024-04-09 10:38:35][DEBUG   ]: receive message
+[2024-04-09 10:38:36][DEBUG   ]: receive message
+[2024-04-09 10:38:38][DEBUG   ]: receive message
+[2024-04-09 10:38:39][DEBUG   ]: receive message
+[2024-04-09 10:38:40][DEBUG   ]: receive message
+[2024-04-09 10:38:41][DEBUG   ]: receive message
+[2024-04-09 10:38:42][DEBUG   ]: receive message
+[2024-04-09 15:17:51][ERROR   ]: get the wrong message format
+[2024-04-09 15:18:18][ERROR   ]: get the wrong message format
+[2024-04-09 16:32:58][ERROR   ]: socket bind error
+[2024-04-09 16:35:05][DEBUG   ]: receive message
+[2024-04-09 16:35:05][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:05][DEBUG   ]: parse error
+[2024-04-09 16:35:08][DEBUG   ]: receive message
+[2024-04-09 16:35:08][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:08][DEBUG   ]: parse error
+[2024-04-09 16:35:13][DEBUG   ]: receive message
+[2024-04-09 16:35:13][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:13][DEBUG   ]: parse error
+[2024-04-09 16:35:23][DEBUG   ]: receive message
+[2024-04-09 16:35:23][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:23][DEBUG   ]: parse error
+[2024-04-09 16:35:43][DEBUG   ]: receive message
+[2024-04-09 16:35:43][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:43][DEBUG   ]: parse error
+[2024-04-09 16:35:49][DEBUG   ]: receive message
+[2024-04-09 16:35:49][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:49][DEBUG   ]: parse error
+[2024-04-09 16:35:51][DEBUG   ]: receive message
+[2024-04-09 16:35:51][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:51][DEBUG   ]: parse error
+[2024-04-09 16:35:55][DEBUG   ]: receive message
+[2024-04-09 16:35:55][ERROR   ]: get the wrong message format
+[2024-04-09 16:35:55][DEBUG   ]: parse error
+[2024-04-09 16:40:51][DEBUG   ]: receive message
+[2024-04-09 16:40:51][ERROR   ]: get the wrong message format
+[2024-04-09 16:40:51][DEBUG   ]: parse error
+[2024-04-09 16:40:53][DEBUG   ]: receive message
+[2024-04-09 16:40:53][ERROR   ]: get the wrong message format
+[2024-04-09 16:40:53][DEBUG   ]: parse error
+[2024-04-09 16:40:58][DEBUG   ]: receive message
+[2024-04-09 16:40:58][ERROR   ]: get the wrong message format
+[2024-04-09 16:40:58][DEBUG   ]: parse error
+[2024-04-09 16:41:08][DEBUG   ]: receive message
+[2024-04-09 16:41:08][ERROR   ]: get the wrong message format
+[2024-04-09 16:41:08][DEBUG   ]: parse error
+[2024-04-09 16:41:57][DEBUG   ]: receive message
+[2024-04-09 16:41:57][ERROR   ]: get the wrong message format
+[2024-04-09 16:41:57][DEBUG   ]: parse error
+[2024-04-09 16:42:00][DEBUG   ]: receive message
+[2024-04-09 16:42:00][ERROR   ]: get the wrong message format
+[2024-04-09 16:42:00][DEBUG   ]: parse error
+[2024-04-09 16:42:04][DEBUG   ]: receive message
+[2024-04-09 16:42:04][ERROR   ]: get the wrong message format
+[2024-04-09 16:42:04][DEBUG   ]: parse error
+[2024-04-09 16:42:14][DEBUG   ]: receive message
+[2024-04-09 16:42:14][ERROR   ]: get the wrong message format
+[2024-04-09 16:42:14][DEBUG   ]: parse error
+[2024-04-09 16:42:33][DEBUG   ]: receive message
+[2024-04-09 16:42:33][ERROR   ]: get the wrong message format
+[2024-04-09 16:42:33][DEBUG   ]: parse error
+[2024-04-09 16:42:39][DEBUG   ]: receive message
+[2024-04-09 16:42:39][ERROR   ]: get the wrong message format
+[2024-04-09 16:42:39][DEBUG   ]: parse error
+[2024-04-09 16:42:41][DEBUG   ]: receive message
+[2024-04-09 16:42:41][ERROR   ]: get the wrong message format
+[2024-04-09 16:42:41][DEBUG   ]: parse error
+[2024-04-09 16:45:29][DEBUG   ]: receive message
+[2024-04-09 16:45:32][DEBUG   ]: receive message
+[2024-04-09 16:45:37][DEBUG   ]: receive message
+[2024-04-09 16:45:49][DEBUG   ]: receive message
+[2024-04-09 16:45:54][DEBUG   ]: receive message
+[2024-04-09 16:45:54][DEBUG   ]: parse error
+[2024-04-09 16:45:56][DEBUG   ]: receive message
+[2024-04-09 16:45:56][DEBUG   ]: parse error
+[2024-04-09 16:45:58][DEBUG   ]: receive message
+[2024-04-09 16:46:00][DEBUG   ]: receive message
+[2024-04-09 16:46:02][DEBUG   ]: receive message
+[2024-04-09 16:46:03][DEBUG   ]: receive message
+[2024-04-09 16:46:05][DEBUG   ]: receive message
+[2024-04-09 16:46:06][DEBUG   ]: receive message
+[2024-04-09 16:46:07][DEBUG   ]: receive message
+[2024-04-09 16:46:08][DEBUG   ]: receive message
+[2024-04-09 20:04:41][DEBUG   ]: receive message
+[2024-04-09 20:04:43][DEBUG   ]: receive message
+[2024-04-09 20:04:48][DEBUG   ]: receive message
+[2024-04-09 20:04:50][DEBUG   ]: receive message
+[2024-04-09 20:04:52][DEBUG   ]: receive message
+[2024-04-09 20:04:53][DEBUG   ]: receive message
+[2024-04-09 20:04:55][DEBUG   ]: receive message
+[2024-04-09 20:04:57][DEBUG   ]: receive message
+[2024-04-09 20:07:13][DEBUG   ]: receive message
+[2024-04-09 20:07:16][DEBUG   ]: receive message
+[2024-04-09 20:07:21][DEBUG   ]: receive message
+[2024-04-09 20:07:32][DEBUG   ]: receive message
+[2024-04-09 20:07:51][DEBUG   ]: receive message
+[2024-04-09 20:07:53][DEBUG   ]: receive message
+[2024-04-09 20:07:54][DEBUG   ]: receive message
+[2024-04-09 20:07:55][DEBUG   ]: receive message
+[2024-04-09 20:07:57][DEBUG   ]: receive message
+[2024-04-09 20:07:58][DEBUG   ]: receive message
+[2024-04-09 20:08:02][DEBUG   ]: receive message
+[2024-04-09 20:08:05][DEBUG   ]: receive message
+[2024-04-09 20:08:12][DEBUG   ]: receive message
+[2024-04-09 21:39:40][ERROR   ]: socket bind error

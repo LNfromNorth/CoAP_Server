@@ -15,17 +15,16 @@
 #define _PKG_INIT    0
 #define _PKG_RECVING 1
 
-class udp_server{
+class UDPServer{
 public:
-    udp_server();
-    ~udp_server() {close(udp_fd);}
+    UDPServer();
+    ~UDPServer() {close(udp_fd);}
 
     void run();
     bool sendData(const char* data, ssize_t size, sockaddr_in client_addr);
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in clinet_addr) = 0;
 private:
-    // std::list<char*>    m_MsgRecvQueue;
     int udp_fd, epoll_udp_fd;
     socklen_t len;
     struct sockaddr_in udp_server_addr;

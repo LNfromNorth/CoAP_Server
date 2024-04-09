@@ -1,7 +1,7 @@
-#include "udp_server.h"
+#include "UDPServer.h"
 #include <iostream>
 
-class MyUDPServer : public udp_server {
+class MyUDPServer : public UDPServer {
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) {
         std::cout << "Received data from" << inet_ntoa(client_addr.sin_addr)

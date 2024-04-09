@@ -21,8 +21,8 @@ struct item{
     char* detil;
     doing_handler handler; 
 } args_items[] {
-    'h', "help",        "get the help for this program",    doing_help,
-    't', "threadpool",  "set the num of threadpool",        doing_threadpool
+    'h', (char*)"help",        (char*)"get the help for this program",    doing_help,
+    't', (char*)"threadpool",  (char*)"set the num of threadpool",        doing_threadpool
 };
 
 #define SIZE_ITEM 2
@@ -78,6 +78,7 @@ int Args::parse(int argc, char** argv) {
         if(ret == -1) return 0;
         i++;
     }
+    return 0;
 }
 
 Args::Args(int argc, char** argv) {
