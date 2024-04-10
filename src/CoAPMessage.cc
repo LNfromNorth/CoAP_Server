@@ -109,8 +109,26 @@ void COAPMessage::make(Type type, char* token, size_t token_length,
 
 char* COAPMessage::format() {
     int pointer = 0;
-    m_length = 4 + m_token_length + 1 + m_payload_size;
-    char* mesg = (char*)malloc(sizeof(uint8_t) * (4 + m_token_length + 1 + m_payload_size));
+    int option_size = 0;
+    for(const auto& option: m_options) {
+        int delta = static_cast<int>(option.first);
+        int length = option.second.size();
+        option_size += 1;
+        // delta length
+        if(delta > 269) option_size += 2;
+        else if(delta > 13) option_size += 1;
+        else option_size = option_size;
+        // length length
+        if(length > 269) option_size += 2;
+        else if(length > 13) option_size += 1;
+        else option_size = option_size;
+        option_size += option.second.size();
+    }
+    if(m_payload_size != 0)
+        m_length = 4 + m_token_length + 1 + m_payload_size + option_size;
+    else
+        m_length = 4 + m_token_length + option_size;
+    char* mesg = (char*)malloc(sizeof(uint8_t) * (m_length));
     mesg[pointer++] = (m_version << 6) | ((uint8_t)m_type << 4) | (m_token_length & 0x0f);
     mesg[pointer++] = (uint8_t)m_code;
     mesg[pointer++] = (m_message_id >> 8) & 0x0f;
@@ -120,11 +138,53 @@ char* COAPMessage::format() {
             mesg[pointer++] = m_token[i];
         }
     }
-    mesg[pointer++] = 0xff;
-    for(int i = 0; i < m_payload_size; i++) {
-        mesg[pointer++] = m_payload[i];
+    for(const auto& option: m_options) {
+        uint16_t delta = static_cast<int>(option.first);
+        uint16_t delta_hout = ((delta - 269) >> 8);
+        uint16_t delta_lout = (delta - 269);
+        uint16_t length = option.second.size();
+        uint16_t length_hout = ((length - 269) >> 8);
+        uint16_t length_lout = (length - 269);
+        int head_pointer = pointer++;
+        // delta length
+        if(delta > 269) {
+            mesg[head_pointer] = (0x0e << 4) & 0xf0;
+            mesg[pointer++] = (delta_hout) & 0xff;
+            mesg[pointer++] = (delta_lout) & 0xff;
+        } else if(delta > 13) {
+            mesg[head_pointer] = (0x0d << 4) & 0xf0;
+            mesg[pointer++] = (delta - 13) & 0xff;
+        } else {
+            mesg[head_pointer] = (delta << 4) & 0xf0;
+        }
+        // length length
+        if(length > 269) {
+            mesg[head_pointer] |= (0x0e) & 0x0f;
+            mesg[pointer++] = (length_hout) & 0xff;
+            mesg[pointer++] = (length_lout) & 0xff;
+        } else if(length > 13) {
+            mesg[head_pointer] |= (0x0d) & 0x0f;
+            mesg[pointer++] = (length - 13) & 0xff;
+        } else {
+            mesg[head_pointer] = mesg[head_pointer] | (length & 0x0f);
+        }
+        for(int i = 0; i < option.second.size(); i++) {
+            mesg[pointer++] = option.second[i];
+        }
+    }
+    if(m_payload_size != 0) {
+        mesg[pointer++] = 0xff;
+        for(int i = 0; i < m_payload_size; i++) {
+            mesg[pointer++] = m_payload[i];
+        }
     }
     return mesg;
+}
+
+bool COAPMessage::add_option(uint16_t delta, uint16_t length, uint8_t* option) {
+    std::vector<uint8_t> option_v;
+    option_v.insert(option_v.end(), option, option + length);
+    m_options[delta] = option_v;
 }
 
 void COAPMessage::print() {
@@ -142,7 +202,7 @@ void COAPMessage::print() {
     // 打印 Options
     std::cout << "Options: " << std::endl;
     for (const auto& option : m_options) {
-        std::cout << "  Option Delta: " << static_cast<int>(option.first) << std::endl;
+        std::cout << "  Option Delta: " << (int)static_cast<int>(option.first) << std::endl;
         std::cout << "  Option Value: ";
         for (uint8_t byte : option.second) {
             std::cout << std::hex << static_cast<int>(byte) << " ";

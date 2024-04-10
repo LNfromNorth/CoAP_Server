@@ -51,11 +51,14 @@ public:
     COAPMessage();
 
     bool parse(const std::vector<uint8_t>& buffer);
+    char* format();
+
     void make(Type type, char* token, size_t token_length, 
             Code code, uint16_t message_id, uint8_t* data, ssize_t data_size);
-    char* format();
-    void print();
 
+    bool add_option(uint16_t delta, uint16_t length, uint8_t* option);
+
+    void print();
     int get_size() { return m_length;}
 private:
     uint8_t m_version;
