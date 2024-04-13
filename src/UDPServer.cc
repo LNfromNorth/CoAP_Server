@@ -29,6 +29,9 @@ UDPServer::UDPServer() {
     }
 }
 
+void UDPServer::receive_handler(const char* data, ssize_t size, sockaddr_in clinet_addr) {
+    logger.log(DEBUG, "virtual function");
+}
 
 void UDPServer::run() {
     while(1) {

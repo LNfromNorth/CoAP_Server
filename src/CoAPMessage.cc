@@ -16,7 +16,7 @@ COAPMessage::COAPMessage()
 
 bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
     if (buffer.size() < 4) {
-        std::cerr << "Invalid CoAP message size" << std::endl;
+        logger.log(ERROR, "Invalid CoAP message size");
         return false;
     }
 
@@ -44,20 +44,20 @@ bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
     // 解析 Options
     size_t option_index = 4 + m_token_length;
     while(option_index < buffer.size()) {
-        uint8_t option_delta = (buffer[option_index] >> 4) & 0x0F;
-        uint8_t option_length = buffer[option_index] & 0x0F;
+        uint16_t option_delta = ((buffer[option_index] >> 4) & 0x0F);
+        uint16_t option_length = buffer[option_index] & 0x0F;
 
-        if((option_delta == (uint8_t)15) & (option_index == (uint8_t)15)) {
+        if((option_delta == 15) & (option_index == (uint8_t)15)) {
             break;
         }
 
-        if((option_delta == (uint8_t)15) | (option_index == (uint8_t)15)) {
+        if((option_delta == 15) | (option_index == (uint8_t)15)) {
             logger.log(ERROR, "get the wrong option message");
             return false;
         }
 
-        if (option_delta == 13) {
-            option_delta = buffer[option_index + 1] + 13;
+        if ((uint16_t)option_delta == 13) {
+            option_delta = (buffer[option_index + 1] + 13);
             option_index += 1;
         } else if (option_delta == 14) {
             option_delta = (buffer[option_index + 1] << 8) + buffer[option_index + 2] + 269;
@@ -168,7 +168,7 @@ char* COAPMessage::format() {
         } else {
             mesg[head_pointer] = mesg[head_pointer] | (length & 0x0f);
         }
-        for(int i = 0; i < option.second.size(); i++) {
+        for(int i = 0; i < (int)option.second.size(); i++) {
             mesg[pointer++] = option.second[i];
         }
     }
@@ -185,6 +185,15 @@ bool COAPMessage::add_option(uint16_t delta, uint16_t length, uint8_t* option) {
     std::vector<uint8_t> option_v;
     option_v.insert(option_v.end(), option, option + length);
     m_options[delta] = option_v;
+    return 1;
+}
+
+bool COAPMessage::isCon() {
+    if(m_type == Type::CON) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void COAPMessage::print() {

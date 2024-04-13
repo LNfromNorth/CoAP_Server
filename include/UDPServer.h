@@ -23,7 +23,7 @@ public:
     void run();
     bool sendData(const char* data, ssize_t size, sockaddr_in client_addr);
 protected:
-    virtual void receive_handler(const char* data, ssize_t size, sockaddr_in clinet_addr) = 0;
+    virtual void receive_handler(const char* data, ssize_t size, sockaddr_in clinet_addr);
 private:
     int udp_fd, epoll_udp_fd;
     socklen_t len;

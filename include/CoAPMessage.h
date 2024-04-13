@@ -47,6 +47,27 @@ public:
         Proxying_Not_Sup    = 0xa5
     };
 
+    enum class Option: uint16_t {
+        Uri_Host            = 3,
+        ETag                = 4,
+        If_Match            = 5,
+        Observe             = 6,
+        Uri_Port            = 7,
+        Location_Path       = 8,
+        Uri_Path            = 11,
+        Content_Format      = 12,
+        Max_Age             = 14,
+        Uri_Query           = 15,
+        Accept              = 17,
+        Location_Query      = 20,
+        Block1              = 23,
+        Block2              = 27,
+        Size1               = 28,
+        Proxy_Uri           = 35,
+        Proxy_Scheme        = 39,
+        Size2               = 60
+    };
+
 
     COAPMessage();
 
@@ -59,7 +80,14 @@ public:
     bool add_option(uint16_t delta, uint16_t length, uint8_t* option);
 
     void print();
+    bool isCon();
+
     int get_size() { return m_length;}
+    uint8_t get_tokenl() { return m_token_length;}
+    char* get_token() { return (char*)&m_token[0];}
+    uint16_t get_msgid() { return m_message_id;}
+    ssize_t get_data_size() { return m_payload_size;}
+    char* get_data() {return (char*)&m_payload;}
 private:
     uint8_t m_version;
     Type m_type;
