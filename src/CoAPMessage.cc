@@ -47,11 +47,11 @@ bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
         uint16_t option_delta = ((buffer[option_index] >> 4) & 0x0F);
         uint16_t option_length = buffer[option_index] & 0x0F;
 
-        if((option_delta == 15) & (option_index == (uint8_t)15)) {
+        if((option_delta == 15) && (option_length == 15)) {
             break;
         }
 
-        if((option_delta == 15) | (option_index == (uint8_t)15)) {
+        if((option_delta == 15) || (option_length == 15)) {
             logger.log(ERROR, "get the wrong option message");
             return false;
         }
@@ -85,7 +85,10 @@ bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
         }
     }
 
+    option_index++;
+
     // 解析 Payload
+    m_payload_size = buffer.size() - option_index;
     if (option_index < buffer.size()) {
         m_payload.assign(buffer.begin() + option_index, buffer.end());
     }
@@ -131,8 +134,8 @@ char* COAPMessage::format() {
     char* mesg = (char*)malloc(sizeof(uint8_t) * (m_length));
     mesg[pointer++] = (m_version << 6) | ((uint8_t)m_type << 4) | (m_token_length & 0x0f);
     mesg[pointer++] = (uint8_t)m_code;
-    mesg[pointer++] = (m_message_id >> 8) & 0x0f;
-    mesg[pointer++] = (m_message_id & 0x0f);
+    mesg[pointer++] = (m_message_id >> 8) & 0xff;
+    mesg[pointer++] = (m_message_id & 0xff);
     if(m_token_length > 0) {
         for(int i = 0; i < m_token_length; i++) {
             mesg[pointer++] = m_token[i];

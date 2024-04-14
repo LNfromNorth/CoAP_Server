@@ -8,13 +8,13 @@
 static Logger& logger = Logger::get_instance();
 
 
-UDPServer::UDPServer() {
+UDPServer::UDPServer(uint16_t port) {
     if((udp_fd = socket(PF_INET, SOCK_DGRAM, 0)) == -1) {
         logger.log(ERROR, "socket init error");
         exit(1);
     }
     udp_server_addr.sin_family = PF_INET;
-    udp_server_addr.sin_port = htons(PORT);
+    udp_server_addr.sin_port = htons(port);
     udp_server_addr.sin_addr.s_addr = INADDR_ANY;
     if(bind(udp_fd, (struct sockaddr*)&udp_server_addr, sizeof(struct sockaddr)) == -1) {
         logger.log(ERROR, "socket bind error");
@@ -51,6 +51,8 @@ void UDPServer::run() {
                 continue;
             } 
             logger.log(DEBUG, "receive message");
+            logger.log(DEBUG, "receive size ");
+            // printf("%d\n", bytes_received);
             receive_handler(buffer, bytes_received, client_addr);
         }
     }

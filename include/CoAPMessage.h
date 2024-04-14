@@ -87,7 +87,7 @@ public:
     char* get_token() { return (char*)&m_token[0];}
     uint16_t get_msgid() { return m_message_id;}
     ssize_t get_data_size() { return m_payload_size;}
-    char* get_data() {return (char*)&m_payload;}
+    char* get_data() {return (char*)&m_payload[0];}
 private:
     uint8_t m_version;
     Type m_type;

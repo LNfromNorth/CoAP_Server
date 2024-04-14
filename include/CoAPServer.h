@@ -10,7 +10,7 @@
 class COAPServer : public UDPServer {
 using TaskType = std::function<void(void*)>;
 public:
-    COAPServer(int max_thread);
+    COAPServer(int max_thread, uint16_t port);
     ~COAPServer() {}
 
     bool sendACK(COAPMessage msg_in, sockaddr_in client_addr);

@@ -40,22 +40,6 @@
       "./include",
       "-c",
       "-o",
-      "build/./src/CoAParser.cc.o",
-      "src/CoAParser.cc"
-    ],
-    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
-    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/src/CoAParser.cc",
-    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/build/src/CoAParser.cc.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/g++",
-      "-g",
-      "-Wall",
-      "-I",
-      "./include",
-      "-c",
-      "-o",
       "build/./src/UDPServer.cc.o",
       "src/UDPServer.cc"
     ],
@@ -98,6 +82,22 @@
   {
     "arguments": [
       "/usr/bin/g++",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "-c",
+      "-o",
+      "build/./src/CoAPMessage.cc.o",
+      "src/CoAPMessage.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/src/CoAPMessage.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/build/src/CoAPMessage.cc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
       "-c",
       "-g",
       "-Wall",
@@ -105,10 +105,10 @@
       "./include",
       "./build/./src/Log.cc.o",
       "./build/./src/Threadpool.cc.o",
-      "./build/./src/CoAParser.cc.o",
       "./build/./src/UDPServer.cc.o",
       "./build/./src/Args.cc.o",
       "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
       "-o",
       "bin/./tests/test_singleton.cc.out",
       "tests/test_singleton.cc"
@@ -127,10 +127,32 @@
       "./include",
       "./build/./src/Log.cc.o",
       "./build/./src/Threadpool.cc.o",
-      "./build/./src/CoAParser.cc.o",
       "./build/./src/UDPServer.cc.o",
       "./build/./src/Args.cc.o",
       "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./tests/test_coap_server.cc.out",
+      "tests/test_coap_server.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_coap_server.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_coap_server.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
       "-o",
       "bin/./tests/test_threadpool.cc.out",
       "tests/test_threadpool.cc"
@@ -145,13 +167,58 @@
       "-c",
       "-g",
       "-Wall",
-      "-I./include",
+      "-I",
+      "./include",
       "./build/./src/Log.cc.o",
       "./build/./src/Threadpool.cc.o",
-      "./build/./src/CoAParser.cc.o",
       "./build/./src/UDPServer.cc.o",
       "./build/./src/Args.cc.o",
       "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./tests/test_udp_msg.cc.out",
+      "tests/test_udp_msg.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_udp_msg.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_udp_msg.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./tests/test_msg.cc.out",
+      "tests/test_msg.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_msg.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_msg.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
       "-o",
       "bin/./tests/test_udp_server.cc.out",
       "tests/test_udp_server.cc"
@@ -159,5 +226,93 @@
     "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
     "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_udp_server.cc",
     "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_udp_server.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./tests/test_msg_format.cc.out",
+      "tests/test_msg_format.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_msg_format.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_msg_format.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./tests/test_args.cc.out",
+      "tests/test_args.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_args.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_args.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./tests/test_log.cc.out",
+      "tests/test_log.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/tests/test_log.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/tests/test_log.cc.out"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-I",
+      "./include",
+      "./build/./src/Log.cc.o",
+      "./build/./src/Threadpool.cc.o",
+      "./build/./src/UDPServer.cc.o",
+      "./build/./src/Args.cc.o",
+      "./build/./src/CoAPServer.cc.o",
+      "./build/./src/CoAPMessage.cc.o",
+      "-o",
+      "bin/./examples/monitor.cc.out",
+      "examples/monitor.cc"
+    ],
+    "directory": "/home/lnfromnorth/workspace/CProject/Capstone_project",
+    "file": "/home/lnfromnorth/workspace/CProject/Capstone_project/examples/monitor.cc",
+    "output": "/home/lnfromnorth/workspace/CProject/Capstone_project/bin/examples/monitor.cc.out"
   }
 ]

@@ -6,7 +6,8 @@
 
 static Logger& logger = Logger::get_instance();
 
-COAPServer::COAPServer(int max_thread) {
+COAPServer::COAPServer(int max_thread, uint16_t port) 
+    : UDPServer(port) {
     tp = new ThreadPool(1, max_thread, 5);
 }
 
@@ -17,11 +18,15 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
     bool ret = msg_in.parse(data_v);
     if(!ret) {
         logger.log(ERROR, "parse failed");
+        // return;
     }
     if(msg_in.isCon()) {
         sendACK(msg_in, client_addr);
     }
-    tp->AddTask(std::bind(&COAPServer::data_handler, this, static_cast<void*>(&msg_in)), NULL);
+    msg_in.print();
+    // tp->AddTask(std::bind(&COAPServer::data_handler, this, &msg_in), NULL);
+    // tp->AddTask(std::bind(&COAPServer::data_handler, this, &msg_in), &msg_in);
+    data_handler(&msg_in);
 }
 
 bool COAPServer::sendACK(COAPMessage msg_in, sockaddr_in client_addr) {

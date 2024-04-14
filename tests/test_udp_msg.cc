@@ -9,6 +9,8 @@
 static Logger& logger = Logger::get_instance();
 
 class MyUDPServer : public UDPServer{
+public:
+    MyUDPServer() : UDPServer(8888) {}
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) {
         std::cout << "Received data from: " << inet_ntoa(client_addr.sin_addr)

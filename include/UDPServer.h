@@ -17,7 +17,7 @@
 
 class UDPServer{
 public:
-    UDPServer();
+    UDPServer(uint16_t port);
     ~UDPServer() {close(udp_fd);}
 
     void run();
