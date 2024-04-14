@@ -32,5 +32,6 @@ $(BUILD_DIR)/%.cc.o: %.cc
 
 .PHONY: clean
 clean:
-	rm $(BIN_DIR)/tests/*
-	rm $(BIN_DIR)/examples/*
+	rm -rf $(BIN_DIR)/tests/*
+	rm -rf $(BIN_DIR)/examples/*
+	rm ./logfile.txt
