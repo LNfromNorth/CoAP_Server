@@ -18,7 +18,8 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
     bool ret = msg_in.parse(data_v);
     if(!ret) {
         logger.log(ERROR, "parse failed");
-        // return;
+        sendError(client_addr);
+        return;
     }
     if(msg_in.isCon()) {
         sendACK(msg_in, client_addr);
@@ -33,6 +34,14 @@ bool COAPServer::sendACK(COAPMessage msg_in, sockaddr_in client_addr) {
     COAPMessage msg_out = COAPMessage();
     msg_out.make(COAPMessage::Type::ACK, msg_in.get_token(), msg_in.get_tokenl(),
             COAPMessage::Code::EMPTY, msg_in.get_msgid(), NULL, 0);
+    char* ret_data = msg_out.format();
+    sendData(ret_data, msg_out.get_size(), client_addr);
+    return true;
+}
+
+bool COAPServer::sendError(sockaddr_in client_addr) {
+    COAPMessage msg_out = COAPMessage();
+    msg_out.make(COAPMessage::Type::NON, NULL, 0, COAPMessage::Code::Bad_Request, 0x0404, NULL, 0);
     char* ret_data = msg_out.format();
     sendData(ret_data, msg_out.get_size(), client_addr);
     return true;

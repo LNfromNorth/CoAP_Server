@@ -14,6 +14,7 @@ public:
     ~COAPServer() {}
 
     bool sendACK(COAPMessage msg_in, sockaddr_in client_addr);
+    bool sendError(sockaddr_in clinet_addr);
     bool sendMessage();
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) override;
