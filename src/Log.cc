@@ -38,8 +38,6 @@ std::string Logger::levelToString(LogLevel level) {
             return "WARNING ";
         case ERROR:
             return "ERROR   ";
-        case CRITICAL:
-            return "CRITICAL";
         default:
             return "UNKNOWN ";
     };

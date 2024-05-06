@@ -9,7 +9,7 @@
 #include "Singleton.h"
 
 // enum to represent log levels
-enum LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL};
+enum LogLevel { DEBUG, INFO, WARNING, ERROR};
 
 class Logger: public Singleton<Logger> {
     friend class Singleton<Logger>;

@@ -8,7 +8,7 @@
 static Logger& logger = Logger::get_instance();
 
 
-UDPServer::UDPServer(uint16_t port) {
+UDPServer::UDPServer(uint16_t port) : ThreadPool(4) {
     if((udp_fd = socket(PF_INET, SOCK_DGRAM, 0)) == -1) {
         logger.log(ERROR, "socket init error");
         exit(1);
@@ -41,21 +41,27 @@ void UDPServer::run() {
             break;
         }
         for(int n = 0; n < nfds; ++n) {
-            char buffer[1024];
-            sockaddr_in client_addr;
-            socklen_t client_addr_len = sizeof(client_addr);
-            ssize_t bytes_received = recvfrom(events[n].data.fd, buffer, sizeof(buffer), 0,
-                            (struct sockaddr*)&client_addr, &client_addr_len);
-            if(bytes_received == -1) {
-                logger.log(ERROR, "Failed to recvive data");
-                continue;
-            } 
-            logger.log(DEBUG, "receive message");
-            logger.log(DEBUG, "receive size ");
-            // printf("%d\n", bytes_received);
-            receive_handler(buffer, bytes_received, client_addr);
+            int fd = events[n].data.fd;
+            enqueue([this, fd]() {
+                logger.log(DEBUG, "set in new thread");
+                receiveData(fd);
+            });
         }
     }
+}
+
+bool UDPServer::receiveData(int fd) {
+    char buffer[1024];
+    sockaddr_in client_addr;
+    socklen_t client_addr_len = sizeof(client_addr);
+    ssize_t bytes_received = recvfrom(fd, buffer, sizeof(buffer), 0,
+                    (struct sockaddr*)&client_addr, &client_addr_len);
+    if(bytes_received == -1) {
+        logger.log(ERROR, "Failed to recvive data");
+        return 0;
+    } 
+    receive_handler(buffer, bytes_received, client_addr);
+    return 1;
 }
 
 bool UDPServer::sendData(const char* data, ssize_t size, sockaddr_in client_addr) {

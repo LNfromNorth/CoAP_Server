@@ -9,19 +9,22 @@
 #include <sys/wait.h>
 #include <arpa/inet.h>
 
+#include "Threadpooln.h"
+
 #define HEADSIZE     5
 #define MAXEPOLLSIZE 20
 #define PORT         8888
 #define _PKG_INIT    0
 #define _PKG_RECVING 1
 
-class UDPServer{
+class UDPServer: public ThreadPool {
 public:
     UDPServer(uint16_t port);
     ~UDPServer() {close(udp_fd);}
 
     void run();
     bool sendData(const char* data, ssize_t size, sockaddr_in client_addr);
+    bool receiveData(int fd);
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in clinet_addr);
 private:

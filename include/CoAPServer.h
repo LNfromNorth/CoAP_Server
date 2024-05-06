@@ -5,12 +5,10 @@
 
 #include "UDPServer.h"
 #include "CoAPMessage.h"
-#include "Threadpool.h"
 
 class COAPServer : public UDPServer {
-using TaskType = std::function<void(void*)>;
 public:
-    COAPServer(int max_thread, uint16_t port);
+    COAPServer(uint16_t port);
     ~COAPServer() {}
 
     bool sendACK(COAPMessage msg_in, sockaddr_in client_addr);
@@ -18,8 +16,6 @@ public:
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) override;
     virtual void data_handler(void* arg);
-private:
-    ThreadPool* tp;
 };
 
 #endif

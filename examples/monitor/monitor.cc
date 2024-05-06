@@ -5,7 +5,7 @@ static int times = 0;
 
 class MyServer: public COAPServer {
 public:
-    MyServer():COAPServer(2, 8888) {
+    MyServer():COAPServer(8888) {
         printf("init myserver\n");
     }
 

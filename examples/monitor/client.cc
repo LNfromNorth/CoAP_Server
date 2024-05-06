@@ -20,7 +20,7 @@ int main() {
     sensor_t* data = (sensor_t*)malloc(sizeof(sensor_t));
     // init message
 
-    COAPServer* cs = new COAPServer(1, 9999);
+    COAPServer* cs = new COAPServer(9999);
     while(true) {
         data->temperature = rand() & 0xffffffff;
         data->humidity = rand() & 0xffffffff;

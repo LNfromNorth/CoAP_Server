@@ -6,9 +6,8 @@
 
 static Logger& logger = Logger::get_instance();
 
-COAPServer::COAPServer(int max_thread, uint16_t port) 
+COAPServer::COAPServer(uint16_t port) 
     : UDPServer(port) {
-    tp = new ThreadPool(1, max_thread, 5);
 }
 
 void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) {
