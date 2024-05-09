@@ -81,6 +81,7 @@ public:
 
     void print();
     bool isCon();
+    bool isACK();
 
     int get_size() { return m_length;}
     uint8_t get_tokenl() { return m_token_length;}

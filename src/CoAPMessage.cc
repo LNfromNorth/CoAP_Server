@@ -199,6 +199,14 @@ bool COAPMessage::isCon() {
     }
 }
 
+bool COAPMessage::isACK() {
+    if(m_type == Type::ACK) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 void COAPMessage::print() {
     std::cout << "Version: " << static_cast<int>(m_version) << std::endl;
     std::cout << "Type: " << static_cast<int>(m_type) << std::endl;
