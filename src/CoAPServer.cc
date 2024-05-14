@@ -20,7 +20,8 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
     bool ret = msg_in.parse(data_v);
     if(!ret) {
         logger.log(ERROR, "parse failed");
-        // return;
+        sendError(client_addr);
+        return;
     }
     if(msg_in.isACK()) {
         ack_received(msg_in);
@@ -42,12 +43,19 @@ bool COAPServer::sendACK(COAPMessage msg_in, sockaddr_in client_addr) {
     return true;
 }
 
+<<<<<<< HEAD
 bool COAPServer::sendMessage(COAPMessage msg_out, sockaddr_in client_addr) {
+=======
+bool COAPServer::sendError(sockaddr_in client_addr) {
+    COAPMessage msg_out = COAPMessage();
+    msg_out.make(COAPMessage::Type::NON, NULL, 0, COAPMessage::Code::Bad_Request, 0x0404, NULL, 0);
+>>>>>>> 85b9951d9fa79e3efbe27b5ff3291211c857b71b
     char* ret_data = msg_out.format();
     sendData(ret_data, msg_out.get_size(), client_addr);
     return true;
 }
 
+<<<<<<< HEAD
 void COAPServer::ack_received(COAPMessage msg_in) {
     fm->set_f(msg_in.get_msgid());
 }
@@ -73,6 +81,8 @@ bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in clien
 }
 
 
+=======
+>>>>>>> 85b9951d9fa79e3efbe27b5ff3291211c857b71b
 void COAPServer::data_handler(void* arg) {
     logger.log(DEBUG, "data handler");
 }
