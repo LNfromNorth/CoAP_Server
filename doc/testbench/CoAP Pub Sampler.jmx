@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">10</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <net.xmeter.samplers.CoAPPubSampler guiclass="net.xmeter.gui.CoAPPubSamplerUI" testclass="net.xmeter.samplers.CoAPPubSampler" testname="CoAP Pub Sampler">
+          <stringProp name="coap.server">127.0.0.1</stringProp>
+          <stringProp name="coap.port">8888</stringProp>
+          <stringProp name="coap.protocol">UDP</stringProp>
+          <boolProp name="coap.dual_ssl_authentication">false</boolProp>
+          <stringProp name="coap.keystore_file_path"></stringProp>
+          <stringProp name="coap.clientcert_file_path"></stringProp>
+          <stringProp name="coap.keystore_password"></stringProp>
+          <stringProp name="coap.clientcert_password"></stringProp>
+          <stringProp name="coap.client_id_prefix">coap_pub_</stringProp>
+          <boolProp name="coap.client_id_suffix">true</boolProp>
+          <stringProp name="coap.user_name">coap_user</stringProp>
+          <stringProp name="coap.password">coap_secret</stringProp>
+          <stringProp name="coap.message_type">PUT</stringProp>
+          <stringProp name="coap.message_id"></stringProp>
+          <stringProp name="coap.token"></stringProp>
+          <stringProp name="coap.resource_path">/mqtt/coap_test_topic</stringProp>
+          <boolProp name="coap.add_timestamp">false</boolProp>
+          <stringProp name="coap.payload_type">Hex string</stringProp>
+          <stringProp name="coap.payload_type_fixed_length">1024</stringProp>
+          <stringProp name="coap.payload_to_sent">1111111122222222</stringProp>
+        </net.xmeter.samplers.CoAPPubSampler>
+        <hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

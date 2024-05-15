@@ -8,6 +8,7 @@
 #include <queue>
 #include <functional>
 #include <vector>
+#include <stdio.h>
 
 class ThreadPool {
 public:
@@ -24,7 +25,9 @@ public:
                         task = std::move(this->tasks.front());
                         this->tasks.pop();
                     }
+                    printf("start run task\n");
                     task();
+                    printf("finish run task\n");
                 }
             });
         }

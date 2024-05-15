@@ -1,7 +1,7 @@
 #include "coap.h"
 #include "monitor.h"
 
-static int times = 0;
+static Logger& logger = Logger::get_instance();
 
 class MyServer: public COAPServer {
 public:
@@ -10,12 +10,12 @@ public:
     }
 
     virtual void data_handler(void* arg) {
+        logger.log(DEBUG, "into data_handler");
         COAPMessage* msg = (COAPMessage*)arg;
-        // msg->print();
+        msg->print();
         sensor_t* data = (sensor_t*)msg->get_data();
         printf("temperture is %d, humidity is %d\n", 
             data->temperature, data->humidity);
-        printf("times = %d\n", times++);
     }
 };
 
