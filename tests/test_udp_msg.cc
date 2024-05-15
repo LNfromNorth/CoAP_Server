@@ -6,7 +6,7 @@
 #include <cstring>
 #include <stdlib.h>
 
-static Logger& logger = Logger::get_instance();
+// static Logger& logger = Logger::get_instance();
 
 class MyUDPServer : public UDPServer{
 public:

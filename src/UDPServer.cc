@@ -5,7 +5,7 @@
 #include "UDPServer.h"
 #include "Log.h"
 
-static Logger& logger = Logger::get_instance();
+// static Logger& logger = Logger::get_instance();
 
 
 UDPServer::UDPServer(uint16_t port) : ThreadPool(4) {
@@ -43,7 +43,6 @@ void UDPServer::run() {
         for(int n = 0; n < nfds; ++n) {
             int fd = events[n].data.fd;
             enqueue([this, fd]() {
-                logger.log(DEBUG, "set in new thread");
                 receiveData(fd);
             });
         }
