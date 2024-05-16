@@ -10,7 +10,7 @@ COAPMessage::COAPMessage()
     :m_version(1),
     m_type(Type::CON),
     m_code(Code::GET),
-    m_message_id(0) {
+    m_message_id(0x1111) {
 
 }
 

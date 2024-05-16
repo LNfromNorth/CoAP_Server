@@ -5,6 +5,7 @@
 #include <memory>
 #include <atomic>
 #include <stdint.h>
+#include <stdio.h>
 
 #define FLAG_NUM 10
 
@@ -56,7 +57,6 @@ public:
                 flags[i].set_msgid(msg_id);
                 return i;
             }
-
         }
         return -1;
     }

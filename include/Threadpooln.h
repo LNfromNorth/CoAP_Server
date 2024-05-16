@@ -17,7 +17,6 @@ class ThreadPool {
 public:
     ThreadPool(size_t numThreads) : stop(false) {
         for(size_t i = 0; i < numThreads; ++i) {
-            logger.log(DEBUG, "init new thread");
             workers.emplace_back([this] {
                 for(;;) {
                     std::function<void()> task;
@@ -29,7 +28,6 @@ public:
                         task = std::move(this->tasks.front());
                         this->tasks.pop();
                     }
-                    logger.log(DEBUG, "schedule new task");
                     task();
                 }
             });

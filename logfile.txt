@@ -1,107 +1,122 @@
-[2024-05-14 14:51:57][DEBUG   ]: schedule new task
-[2024-05-14 14:51:57][DEBUG   ]: schedule new task
-[2024-05-14 14:51:57][DEBUG   ]: schedule new task
-[2024-05-14 14:51:57][DEBUG   ]: schedule new task
-[2024-05-14 14:51:57][DEBUG   ]: schedule new task
-[2024-05-14 14:51:57][DEBUG   ]: schedule new task
-[2024-05-14 14:52:50][DEBUG   ]: schedule new task
-[2024-05-14 14:52:59][DEBUG   ]: schedule new task
-[2024-05-14 14:58:44][DEBUG   ]: init new thread
-[2024-05-14 14:58:44][DEBUG   ]: init new thread
-[2024-05-14 14:58:44][DEBUG   ]: init new thread
-[2024-05-14 14:58:44][DEBUG   ]: init new thread
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:58:50][DEBUG   ]: schedule new task
-[2024-05-14 14:59:07][DEBUG   ]: schedule new task
-[2024-05-14 15:00:36][DEBUG   ]: init new thread
-[2024-05-14 15:00:36][DEBUG   ]: init new thread
-[2024-05-14 15:00:36][DEBUG   ]: init new thread
-[2024-05-14 15:00:36][DEBUG   ]: init new thread
-[2024-05-14 15:00:44][DEBUG   ]: schedule new task
-[2024-05-14 15:00:44][DEBUG   ]: schedule new task
-[2024-05-14 15:00:44][DEBUG   ]: schedule new task
-[2024-05-14 15:00:44][DEBUG   ]: schedule new task
-[2024-05-14 15:00:44][DEBUG   ]: schedule new task
-[2024-05-14 15:00:44][DEBUG   ]:     
-[2024-05-14 15:00:44][DEBUG   ]: send 'hello client' to client
-[2024-05-14 15:00:44][DEBUG   ]: schedule new task
-[2024-05-14 15:01:36][DEBUG   ]: init new thread
-[2024-05-14 15:01:36][DEBUG   ]: init new thread
-[2024-05-14 15:01:36][DEBUG   ]: init new thread
-[2024-05-14 15:01:36][DEBUG   ]: init new thread
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:01:40][DEBUG   ]:     
-[2024-05-14 15:01:40][DEBUG   ]: send 'hello client' to client
-[2024-05-14 15:01:40][DEBUG   ]: schedule new task
-[2024-05-14 15:02:33][DEBUG   ]: init new thread
-[2024-05-14 15:02:33][DEBUG   ]: init new thread
-[2024-05-14 15:02:33][DEBUG   ]: init new thread
-[2024-05-14 15:02:33][DEBUG   ]: init new thread
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:02:54][DEBUG   ]:     
-[2024-05-14 15:02:54][DEBUG   ]: send 'hello client' to client
-[2024-05-14 15:02:54][DEBUG   ]: schedule new task
-[2024-05-14 15:27:33][DEBUG   ]: init new thread
-[2024-05-14 15:27:33][DEBUG   ]: init new thread
-[2024-05-14 15:27:33][DEBUG   ]: init new thread
-[2024-05-14 15:27:33][DEBUG   ]: init new thread
-[2024-05-14 15:42:37][DEBUG   ]: schedule new task
-[2024-05-14 15:42:37][DEBUG   ]: schedule new task
-[2024-05-14 15:42:37][DEBUG   ]: schedule new task
-[2024-05-14 15:42:37][DEBUG   ]: schedule new task
-[2024-05-14 15:42:37][DEBUG   ]: schedule new task
-[2024-05-14 15:42:37][DEBUG   ]: data handler
-[2024-05-14 15:42:37][DEBUG   ]: schedule new task
-[2024-05-14 15:42:39][DEBUG   ]: data handler
-[2024-05-14 15:42:39][DEBUG   ]: schedule new task
-[2024-05-14 15:42:44][DEBUG   ]: data handler
-[2024-05-14 15:42:44][DEBUG   ]: schedule new task
-[2024-05-14 15:42:53][DEBUG   ]: data handler
-[2024-05-14 15:42:53][DEBUG   ]: schedule new task
-[2024-05-14 15:43:11][DEBUG   ]: data handler
-[2024-05-14 15:43:11][DEBUG   ]: schedule new task
-[2024-05-15 14:53:25][DEBUG   ]: init new thread
-[2024-05-15 14:53:25][DEBUG   ]: init new thread
-[2024-05-15 14:53:25][DEBUG   ]: init new thread
-[2024-05-15 14:53:25][DEBUG   ]: init new thread
-[2024-05-15 15:13:24][DEBUG   ]: init new thread
-[2024-05-15 15:13:24][DEBUG   ]: init new thread
-[2024-05-15 15:13:24][DEBUG   ]: init new thread
-[2024-05-15 15:13:24][DEBUG   ]: init new thread
-[2024-05-16 08:18:25][DEBUG   ]: init new thread
-[2024-05-16 08:18:25][DEBUG   ]: init new thread
-[2024-05-16 08:18:25][DEBUG   ]: init new thread
-[2024-05-16 08:18:25][DEBUG   ]: init new thread
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
-[2024-05-16 08:18:37][DEBUG   ]:     
-[2024-05-16 08:18:37][DEBUG   ]: send 'hello client' to client
-[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 14:00:37][DEBUG   ]: add new time ack
+[2024-05-16 14:00:37][DEBUG   ]: send ack
+[2024-05-16 14:00:37][DEBUG   ]: send ack
+[2024-05-16 14:00:37][DEBUG   ]: receive new message
+[2024-05-16 14:00:37][DEBUG   ]: receive new message
+[2024-05-16 14:00:37][DEBUG   ]: receive new ack
+[2024-05-16 14:00:37][DEBUG   ]: ack received handler
+[2024-05-16 14:00:37][DEBUG   ]: receive new ack
+[2024-05-16 14:00:37][DEBUG   ]: ack received handler
+[2024-05-16 14:00:48][DEBUG   ]: add new time ack
+[2024-05-16 14:00:48][DEBUG   ]: send ack
+[2024-05-16 14:00:48][DEBUG   ]: receive new message
+[2024-05-16 14:00:48][DEBUG   ]: receive new ack
+[2024-05-16 14:00:48][DEBUG   ]: ack received handler
+[2024-05-16 14:00:48][DEBUG   ]: send ack
+[2024-05-16 14:00:48][DEBUG   ]: receive new message
+[2024-05-16 14:00:48][DEBUG   ]: receive new ack
+[2024-05-16 14:00:48][DEBUG   ]: ack received handler
+[2024-05-16 14:00:53][DEBUG   ]: add new time ack
+[2024-05-16 14:00:53][DEBUG   ]: send ack
+[2024-05-16 14:00:53][DEBUG   ]: receive new message
+[2024-05-16 14:00:53][DEBUG   ]: send ack
+[2024-05-16 14:00:53][DEBUG   ]: receive new ack
+[2024-05-16 14:00:53][DEBUG   ]: ack received handler
+[2024-05-16 14:00:53][DEBUG   ]: receive new message
+[2024-05-16 14:00:53][DEBUG   ]: receive new ack
+[2024-05-16 14:00:53][DEBUG   ]: ack received handler
+[2024-05-16 14:01:22][DEBUG   ]: add new time ack
+[2024-05-16 14:01:22][DEBUG   ]: send ack
+[2024-05-16 14:01:22][DEBUG   ]: send ack
+[2024-05-16 14:01:22][DEBUG   ]: send ack
+[2024-05-16 14:01:22][DEBUG   ]: receive new message
+[2024-05-16 14:01:22][DEBUG   ]: receive new ack
+[2024-05-16 14:01:22][DEBUG   ]: receive new message
+[2024-05-16 14:01:22][DEBUG   ]: receive new ack
+[2024-05-16 14:01:26][ERROR   ]: epoll wait error
+[2024-05-16 14:01:30][DEBUG   ]: ack received handler
+[2024-05-16 14:01:30][ERROR   ]: Failed to recvive data
+[2024-05-16 14:01:33][DEBUG   ]: ack received handler
+[2024-05-16 14:01:43][DEBUG   ]: add new time ack
+[2024-05-16 14:01:43][DEBUG   ]: send ack
+[2024-05-16 14:01:43][DEBUG   ]: send ack
+[2024-05-16 14:01:43][DEBUG   ]: receive new ack
+[2024-05-16 14:01:43][DEBUG   ]: ack received handler
+[2024-05-16 14:01:43][DEBUG   ]: send ack
+[2024-05-16 14:01:43][DEBUG   ]: receive new message
+[2024-05-16 14:01:43][DEBUG   ]: receive new message
+[2024-05-16 14:01:43][DEBUG   ]: receive new ack
+[2024-05-16 14:01:43][DEBUG   ]: ack received handler
+[2024-05-16 14:01:51][DEBUG   ]: add new time ack
+[2024-05-16 14:01:51][DEBUG   ]: send ack
+[2024-05-16 14:01:51][DEBUG   ]: send ack
+[2024-05-16 14:01:51][DEBUG   ]: send ack
+[2024-05-16 14:01:51][DEBUG   ]: receive new message
+[2024-05-16 14:01:51][DEBUG   ]: receive new message
+[2024-05-16 14:01:51][DEBUG   ]: receive new ack
+[2024-05-16 14:01:51][DEBUG   ]: receive new ack
+[2024-05-16 14:01:51][DEBUG   ]: ack received handler
+[2024-05-16 14:01:51][DEBUG   ]: receive new ack
+[2024-05-16 14:01:51][DEBUG   ]: ack received handler
+[2024-05-16 14:01:53][DEBUG   ]: add new time ack
+[2024-05-16 14:01:53][DEBUG   ]: send ack
+[2024-05-16 14:01:53][DEBUG   ]: send ack
+[2024-05-16 14:01:53][DEBUG   ]: receive new message
+[2024-05-16 14:01:53][DEBUG   ]: receive new message
+[2024-05-16 14:01:53][DEBUG   ]: receive new message
+[2024-05-16 14:01:53][DEBUG   ]: receive new ack
+[2024-05-16 14:01:53][DEBUG   ]: receive new ack
+[2024-05-16 14:01:53][DEBUG   ]: receive new ack
+[2024-05-16 14:01:53][DEBUG   ]: ack received handler
+[2024-05-16 14:01:53][DEBUG   ]: ack received handler
+[2024-05-16 14:01:59][DEBUG   ]: add new time ack
+[2024-05-16 14:01:59][DEBUG   ]: send ack
+[2024-05-16 14:01:59][DEBUG   ]: receive new message
+[2024-05-16 14:01:59][DEBUG   ]: send ack
+[2024-05-16 14:01:59][DEBUG   ]: receive new ack
+[2024-05-16 14:01:59][DEBUG   ]: receive new message
+[2024-05-16 14:01:59][DEBUG   ]: receive new ack
+[2024-05-16 14:01:59][DEBUG   ]: ack received handler
+[2024-05-16 14:01:59][DEBUG   ]: ack received handler
+[2024-05-16 14:01:59][DEBUG   ]: ack received handler
+[2024-05-16 14:04:33][DEBUG   ]: add time ack
+[2024-05-16 14:04:33][DEBUG   ]: send ack
+[2024-05-16 14:04:33][DEBUG   ]: send ack
+[2024-05-16 14:04:33][DEBUG   ]: receive new ack
+[2024-05-16 14:04:33][DEBUG   ]: receive new message
+[2024-05-16 14:04:33][DEBUG   ]: receive new ack
+[2024-05-16 14:04:33][DEBUG   ]: receive new ack
+[2024-05-16 14:04:33][DEBUG   ]: ack received handler
+[2024-05-16 14:04:33][DEBUG   ]: ack received handler
+[2024-05-16 14:04:33][DEBUG   ]: receive new message
+[2024-05-16 14:06:13][ERROR   ]: time out
+[2024-05-16 14:06:13][DEBUG   ]: finish time ack
+[2024-05-16 14:07:34][DEBUG   ]: add time ack
+[2024-05-16 14:07:34][DEBUG   ]: send ack
+[2024-05-16 14:07:34][DEBUG   ]: receive new message
+[2024-05-16 14:07:34][DEBUG   ]: send ack
+[2024-05-16 14:07:34][DEBUG   ]: receive new ack
+[2024-05-16 14:07:34][DEBUG   ]: ack received handler
+[2024-05-16 14:07:34][DEBUG   ]: receive new message
+[2024-05-16 14:07:34][DEBUG   ]: receive new ack
+[2024-05-16 14:07:34][DEBUG   ]: ack received handler
+[2024-05-16 14:08:08][DEBUG   ]: add time ack
+[2024-05-16 14:08:08][DEBUG   ]: send ack
+[2024-05-16 14:08:08][DEBUG   ]: send ack
+[2024-05-16 14:08:08][DEBUG   ]: send ack
+[2024-05-16 14:08:08][DEBUG   ]: receive new message
+[2024-05-16 14:08:08][DEBUG   ]: receive new message
+[2024-05-16 14:08:08][DEBUG   ]: receive new ack
+[2024-05-16 14:08:08][DEBUG   ]: receive new ack
+[2024-05-16 14:08:08][DEBUG   ]: receive new ack
+[2024-05-16 14:08:08][DEBUG   ]: ack received handler
+[2024-05-16 14:08:08][DEBUG   ]: ack received handler
+[2024-05-16 14:08:09][ERROR   ]: time out
+[2024-05-16 14:08:09][DEBUG   ]: finish time ack
+[2024-05-16 14:08:56][DEBUG   ]: add time ack
+[2024-05-16 14:08:56][DEBUG   ]: send ack
+[2024-05-16 14:08:56][DEBUG   ]: receive new message
+[2024-05-16 14:08:56][DEBUG   ]: receive new ack
+[2024-05-16 14:08:56][DEBUG   ]: ack received handler
+[2024-05-16 14:08:57][ERROR   ]: time out
+[2024-05-16 14:08:57][DEBUG   ]: finish time ack

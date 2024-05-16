@@ -10,7 +10,7 @@
 COAPServer::COAPServer(uint16_t port) 
     : UDPServer(port) {
     fm = new FManager();
-    msg_id = 0;
+    msg_id = 0x1111;
 }
 
 void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) {
@@ -20,24 +20,24 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
     bool ret = msg_in.parse(data_v);
     if(!ret) {
         logger.log(ERROR, "parse failed");
-        // sendError(client_addr);
         return;
     }
     if(msg_in.isACK()) {
+        logger.log(DEBUG, "receive new ack");
         ack_received(msg_in);
     } else {
         if(msg_in.isCon()) {
             sendACK(msg_in, client_addr);
         }
-        // msg_in.print();
         data_handler(&msg_in);
     }
 }
 
 bool COAPServer::sendACK(COAPMessage msg_in, sockaddr_in client_addr) {
+    logger.log(DEBUG, "send ack");
     COAPMessage msg_out = COAPMessage();
     msg_out.make(COAPMessage::Type::ACK, msg_in.get_token(), msg_in.get_tokenl(),
-            COAPMessage::Code::EMPTY, msg_id++, NULL, 0);
+            COAPMessage::Code::EMPTY, msg_in.get_msgid(), NULL, 0);
     char* ret_data = msg_out.format();
     sendData(ret_data, msg_out.get_size(), client_addr);
     return true;
@@ -49,6 +49,8 @@ bool COAPServer::sendMessage(COAPMessage msg_out, sockaddr_in client_addr) {
 }
 
 void COAPServer::ack_received(COAPMessage msg_in) {
+    logger.log(DEBUG, "ack received handler");
+    printf("message id is %d\n", msg_in.get_msgid());
     fm->set_f(msg_in.get_msgid());
 }
 
@@ -56,15 +58,18 @@ void COAPServer::ack_received(COAPMessage msg_in) {
 bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in client_addr) {
     int timeout_ms = 1000;
     int index = fm->alloc_f(msg_out.get_msgid());
-    sendMessage(msg_out, client_addr);
+    logger.log(DEBUG, "add time ack");
+    // sendMessage(msg_out, client_addr);
     enqueue([this, index, msg_out, client_addr, timeout_ms]() {
         for(int i = 0; i < 5; i++) {
             sendMessage(msg_out, client_addr);
             std::this_thread::sleep_for(std::chrono::milliseconds(timeout_ms));
             logger.log(ERROR, "time out");
+            // check
             if(fm->check_f(index) == false) {
-                return 0;
+                logger.log(DEBUG, "finish time ack");
                 fm->delete_f(index);
+                return 0;
             }
         }
         return 1;
