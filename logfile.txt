@@ -88,3 +88,20 @@
 [2024-05-15 15:13:24][DEBUG   ]: init new thread
 [2024-05-15 15:13:24][DEBUG   ]: init new thread
 [2024-05-15 15:13:24][DEBUG   ]: init new thread
+[2024-05-16 08:18:25][DEBUG   ]: init new thread
+[2024-05-16 08:18:25][DEBUG   ]: init new thread
+[2024-05-16 08:18:25][DEBUG   ]: init new thread
+[2024-05-16 08:18:25][DEBUG   ]: init new thread
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
+[2024-05-16 08:18:37][DEBUG   ]:     
+[2024-05-16 08:18:37][DEBUG   ]: send 'hello client' to client
+[2024-05-16 08:18:37][DEBUG   ]: schedule new task
