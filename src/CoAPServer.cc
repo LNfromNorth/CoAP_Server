@@ -26,10 +26,7 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
         logger.log(DEBUG, "receive new ack");
         ack_received(msg_in);
     } else {
-        if(msg_in.isCon()) {
-            sendACK(msg_in, client_addr);
-        }
-        data_handler(&msg_in);
+        data_handler(msg_in, client_addr);
     }
 }
 
@@ -50,7 +47,9 @@ bool COAPServer::sendMessage(COAPMessage msg_out, sockaddr_in client_addr) {
 
 void COAPServer::ack_received(COAPMessage msg_in) {
     logger.log(DEBUG, "ack received handler");
-    printf("message id is %d\n", msg_in.get_msgid());
+    char out[100];
+    sprintf(out, "release timeout msgid is %d", msg_in.get_msgid());
+    logger.log(DEBUG, out);
     fm->set_f(msg_in.get_msgid());
 }
 
@@ -64,13 +63,13 @@ bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in clien
         for(int i = 0; i < 5; i++) {
             sendMessage(msg_out, client_addr);
             std::this_thread::sleep_for(std::chrono::milliseconds(timeout_ms));
-            logger.log(ERROR, "time out");
             // check
             if(fm->check_f(index) == false) {
                 logger.log(DEBUG, "finish time ack");
                 fm->delete_f(index);
                 return 0;
             }
+            logger.log(ERROR, "time out");
         }
         return 1;
     });
@@ -78,6 +77,6 @@ bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in clien
 }
 
 
-void COAPServer::data_handler(void* arg) {
+void COAPServer::data_handler(COAPMessage msg, sockaddr_in client_addr) {
     logger.log(DEBUG, "data handler");
 }

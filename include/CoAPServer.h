@@ -22,7 +22,7 @@ public:
     bool sendMessage();
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) override;
-    virtual void data_handler(void* arg);
+    virtual void data_handler(COAPMessage msg, sockaddr_in client_addr);
 private:
     void ack_received(COAPMessage msg_in);
     uint16_t msg_id;

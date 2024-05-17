@@ -1,26 +1,41 @@
 #include "coap.h"
 #include <cstring>
 
-int main() {
-    COAPServer cs = COAPServer(9999);
+// static Logger& logger = Logger::get_instance();
 
+int main() {
+
+    logger.log(DEBUG, "=========== init socket ============");
+    COAPServer cs = COAPServer(9999);
     struct sockaddr_in si;
     memset(&si, 0, sizeof(struct sockaddr_in));
     si.sin_family = AF_INET;
     si.sin_port = htons(8888);
     si.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-    int udp_fd = socket(PF_INET, SOCK_DGRAM, 0);
-    bind(udp_fd, (struct sockaddr*)&si, sizeof(struct sockaddr));
+    COAPMessage msg1 = COAPMessage();
+    char* payload = "hello";
+    msg1.make(COAPMessage::Type::NON, NULL, 0, 
+            COAPMessage::Code::POST, cs.get_msgid(),
+            (uint8_t*)payload, 5);
+    char* msg1_format = msg1.format();
+
+    char out_id[100];
+
+    logger.log(DEBUG, "=========== send NON ===============");
+    sprintf(out_id, "send message id is %d", msg1.get_msgid());
+    logger.log(DEBUG, out_id);
+    cs.sendMessage(msg1, si);
 
     COAPMessage msg = COAPMessage();
-    char* payload = "hello";
     msg.make(COAPMessage::Type::CON, NULL, 0, 
             COAPMessage::Code::POST, cs.get_msgid(),
             (uint8_t*)payload, 5);
     char* msg_format = msg.format();
 
-    printf("send message id is %d\n", msg.get_msgid());
+    logger.log(DEBUG, "=========== send CON ===============");
+    sprintf(out_id, "send message id is %d", msg.get_msgid());
+    logger.log(DEBUG, out_id);
     cs.sendMessage_with_timeout(msg, si);
     cs.run();
 

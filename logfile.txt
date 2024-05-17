@@ -120,3 +120,92 @@
 [2024-05-16 14:08:56][DEBUG   ]: ack received handler
 [2024-05-16 14:08:57][ERROR   ]: time out
 [2024-05-16 14:08:57][DEBUG   ]: finish time ack
+[2024-05-17 15:03:16][DEBUG   ]: =========== init socket ============
+
+[2024-05-17 15:03:16][DEBUG   ]: =========== send NON ===============
+
+[2024-05-17 15:03:16][DEBUG   ]: send message id is 4369
+[2024-05-17 15:03:16][DEBUG   ]: =========== send CON ===============
+
+[2024-05-17 15:03:16][DEBUG   ]: send message id is 4370
+[2024-05-17 15:03:16][DEBUG   ]: add time ack
+[2024-05-17 15:03:16][DEBUG   ]: send ack
+[2024-05-17 15:03:16][DEBUG   ]: receive new message
+[2024-05-17 15:03:16][DEBUG   ]: receive new message
+[2024-05-17 15:03:16][DEBUG   ]: receive new message
+[2024-05-17 15:03:16][DEBUG   ]: receive new ack
+[2024-05-17 15:03:16][DEBUG   ]: ack received handler
+[2024-05-17 15:03:17][ERROR   ]: time out
+[2024-05-17 15:03:17][DEBUG   ]: finish time ack
+[2024-05-17 15:11:18][DEBUG   ]: =========== init socket ============
+[2024-05-17 15:11:18][DEBUG   ]: =========== send NON ===============
+[2024-05-17 15:11:18][DEBUG   ]: send message id is 4369
+[2024-05-17 15:11:18][DEBUG   ]: =========== send CON ===============
+[2024-05-17 15:11:18][DEBUG   ]: send message id is 4370
+[2024-05-17 15:11:18][DEBUG   ]: add time ack
+[2024-05-17 15:11:18][DEBUG   ]: receive new message
+[2024-05-17 15:11:18][DEBUG   ]: receive new message
+[2024-05-17 15:11:18][DEBUG   ]: receive new message
+[2024-05-17 15:11:18][DEBUG   ]: message type is NON
+[2024-05-17 15:11:18][DEBUG   ]: message type is CON
+[2024-05-17 15:11:18][DEBUG   ]: message type is CON
+[2024-05-17 15:11:18][DEBUG   ]: message id is 4369
+[2024-05-17 15:11:18][DEBUG   ]: message id is 4370
+[2024-05-17 15:11:18][DEBUG   ]: send ack
+[2024-05-17 15:11:18][DEBUG   ]: receive new ack
+[2024-05-17 15:11:18][DEBUG   ]: ack received handler
+[2024-05-17 15:11:19][ERROR   ]: time out
+[2024-05-17 15:11:19][DEBUG   ]: finish time ack
+[2024-05-17 15:12:04][DEBUG   ]: =========== init socket ============
+[2024-05-17 15:12:04][DEBUG   ]: =========== send NON ===============
+[2024-05-17 15:12:04][DEBUG   ]: send message id is 4369
+[2024-05-17 15:12:04][DEBUG   ]: =========== send CON ===============
+[2024-05-17 15:12:04][DEBUG   ]: send message id is 4370
+[2024-05-17 15:12:04][DEBUG   ]: add time ack
+[2024-05-17 15:12:04][DEBUG   ]: receive new message
+[2024-05-17 15:12:04][DEBUG   ]: receive new message
+[2024-05-17 15:12:04][DEBUG   ]: message type is NON
+[2024-05-17 15:12:04][DEBUG   ]: message type is CON
+[2024-05-17 15:12:04][DEBUG   ]: message id is 4369
+[2024-05-17 15:12:04][DEBUG   ]: message id is 4370
+[2024-05-17 15:12:04][DEBUG   ]: send ack
+[2024-05-17 15:12:04][DEBUG   ]: receive new ack
+[2024-05-17 15:12:04][DEBUG   ]: ack received handler
+[2024-05-17 15:12:05][DEBUG   ]: finish time ack
+[2024-05-17 15:22:23][DEBUG   ]: =========== init socket ============
+[2024-05-17 15:22:23][DEBUG   ]: =========== send NON ===============
+[2024-05-17 15:22:23][DEBUG   ]: send message id is 4369
+[2024-05-17 15:22:23][DEBUG   ]: =========== send CON ===============
+[2024-05-17 15:22:23][DEBUG   ]: send message id is 4370
+[2024-05-17 15:22:23][DEBUG   ]: add time ack
+[2024-05-17 15:22:23][DEBUG   ]: receive new message
+[2024-05-17 15:22:23][DEBUG   ]: message type is NON
+[2024-05-17 15:22:23][DEBUG   ]: message id is 4369
+[2024-05-17 15:22:23][DEBUG   ]: receive new message
+[2024-05-17 15:22:23][DEBUG   ]: message type is CON
+[2024-05-17 15:22:23][DEBUG   ]: message id is 4370
+[2024-05-17 15:22:23][DEBUG   ]: send ack
+[2024-05-17 15:22:23][DEBUG   ]: receive new ack
+[2024-05-17 15:22:23][DEBUG   ]: ack received handler
+[2024-05-17 15:22:23][DEBUG   ]: release timeout msgid is 4370
+[2024-05-17 15:22:24][DEBUG   ]: finish time ack
+[2024-05-17 15:24:09][ERROR   ]: socket bind error
+[2024-05-17 15:24:22][DEBUG   ]: =========== init socket ============
+[2024-05-17 15:24:22][DEBUG   ]: =========== send NON ===============
+[2024-05-17 15:24:22][DEBUG   ]: send message id is 4369
+[2024-05-17 15:24:22][DEBUG   ]: =========== send CON ===============
+[2024-05-17 15:24:22][DEBUG   ]: send message id is 4370
+[2024-05-17 15:24:22][DEBUG   ]: add time ack
+[2024-05-17 15:24:22][DEBUG   ]: receive new message
+[2024-05-17 15:24:22][DEBUG   ]: receive new message
+[2024-05-17 15:24:22][DEBUG   ]: receive new message
+[2024-05-17 15:24:22][DEBUG   ]: message type is CON
+[2024-05-17 15:24:22][DEBUG   ]: message type is CON
+[2024-05-17 15:24:22][DEBUG   ]: message type is NON
+[2024-05-17 15:24:22][DEBUG   ]: message id is 4369
+[2024-05-17 15:24:22][DEBUG   ]: message id is 4370
+[2024-05-17 15:24:22][DEBUG   ]: send ack
+[2024-05-17 15:24:22][DEBUG   ]: receive new ack
+[2024-05-17 15:24:22][DEBUG   ]: ack received handler
+[2024-05-17 15:24:22][DEBUG   ]: release timeout msgid is 4370
+[2024-05-17 15:24:23][DEBUG   ]: finish time ack

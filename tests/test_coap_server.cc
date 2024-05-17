@@ -4,10 +4,20 @@
 class MyServer: public COAPServer {
 public:
     MyServer(): COAPServer(8888) {}
-    virtual void data_handler(void* arg) override {
-        COAPMessage* msg = (COAPMessage*)arg;
+    virtual void data_handler(COAPMessage msg, sockaddr_in client_addr) override {
         logger.log(DEBUG, "receive new message");
-        printf("message id is %d\n", msg->get_msgid());
+        char out[100];
+        if(msg.isCon()) {
+            sprintf(out, "message type is CON");
+        } else {
+            sprintf(out, "message type is NON");
+        }
+        logger.log(DEBUG, out);
+        sprintf(out, "message id is %d", msg.get_msgid());
+        logger.log(DEBUG, out);
+        if(msg.isCon()) {
+            sendACK(msg, client_addr);
+        }
         return;
     }
 };
