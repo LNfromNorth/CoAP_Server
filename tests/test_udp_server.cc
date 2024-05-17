@@ -1,6 +1,8 @@
 #include "coap.h"
 #include <iostream>
 
+static Logger& logger = Logger::get_instance();
+
 class MyUDPServer : public UDPServer {
 public:
     MyUDPServer() 

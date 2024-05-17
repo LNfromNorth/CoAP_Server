@@ -1,7 +1,7 @@
 #include "coap.h"
 #include <cstring>
 
-// static Logger& logger = Logger::get_instance();
+static Logger& logger = Logger::get_instance();
 
 int main() {
 
@@ -14,11 +14,11 @@ int main() {
     si.sin_addr.s_addr = inet_addr("127.0.0.1");
 
     COAPMessage msg1 = COAPMessage();
-    char* payload = "hello";
+    char* payload = (char*)"hello";
     msg1.make(COAPMessage::Type::NON, NULL, 0, 
             COAPMessage::Code::POST, cs.get_msgid(),
             (uint8_t*)payload, 5);
-    char* msg1_format = msg1.format();
+//     char* msg1_format = (char*)msg1.format();
 
     char out_id[100];
 
@@ -31,7 +31,7 @@ int main() {
     msg.make(COAPMessage::Type::CON, NULL, 0, 
             COAPMessage::Code::POST, cs.get_msgid(),
             (uint8_t*)payload, 5);
-    char* msg_format = msg.format();
+//     char* msg_format = (char*)msg.format();
 
     logger.log(DEBUG, "=========== send CON ===============");
     sprintf(out_id, "send message id is %d", msg.get_msgid());

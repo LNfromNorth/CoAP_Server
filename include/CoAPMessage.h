@@ -83,6 +83,12 @@ public:
     bool isCon();
     bool isACK();
 
+    char* get_code2string() {
+        if(m_type == Type::CON) return (char*)"CON";
+        else if(m_type == Type::NON) return (char*)"NON";
+        else if(m_type == Type::ACK) return (char*)"ACK";
+        else return (char*)"RST";
+    }
     int get_size() { return m_length;}
     uint8_t get_tokenl() { return m_token_length;}
     char* get_token() { return (char*)&m_token[0];}

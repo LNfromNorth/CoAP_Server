@@ -5,7 +5,7 @@
 #include "CoAPServer.h"
 #include "Log.h"
 
-// static Logger& logger = Logger::get_instance();
+static Logger& logger = Logger::get_instance();
 
 COAPServer::COAPServer(uint16_t port) 
     : UDPServer(port) {
@@ -23,7 +23,7 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
         return;
     }
     if(msg_in.isACK()) {
-        logger.log(DEBUG, "receive new ack");
+        // logger.log(DEBUG, "receive new ack");
         ack_received(msg_in);
     } else {
         data_handler(msg_in, client_addr);
@@ -31,7 +31,7 @@ void COAPServer::receive_handler(const char* data, ssize_t size, sockaddr_in cli
 }
 
 bool COAPServer::sendACK(COAPMessage msg_in, sockaddr_in client_addr) {
-    logger.log(DEBUG, "send ack");
+    // logger.log(DEBUG, "send ack");
     COAPMessage msg_out = COAPMessage();
     msg_out.make(COAPMessage::Type::ACK, msg_in.get_token(), msg_in.get_tokenl(),
             COAPMessage::Code::EMPTY, msg_in.get_msgid(), NULL, 0);
@@ -46,10 +46,10 @@ bool COAPServer::sendMessage(COAPMessage msg_out, sockaddr_in client_addr) {
 }
 
 void COAPServer::ack_received(COAPMessage msg_in) {
-    logger.log(DEBUG, "ack received handler");
+    // logger.log(DEBUG, "ack received handler");
     char out[100];
     sprintf(out, "release timeout msgid is %d", msg_in.get_msgid());
-    logger.log(DEBUG, out);
+    // logger.log(DEBUG, out);
     fm->set_f(msg_in.get_msgid());
 }
 
@@ -57,7 +57,7 @@ void COAPServer::ack_received(COAPMessage msg_in) {
 bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in client_addr) {
     int timeout_ms = 1000;
     int index = fm->alloc_f(msg_out.get_msgid());
-    logger.log(DEBUG, "add time ack");
+    // logger.log(DEBUG, "add time ack");
     // sendMessage(msg_out, client_addr);
     enqueue([this, index, msg_out, client_addr, timeout_ms]() {
         for(int i = 0; i < 5; i++) {
@@ -65,7 +65,7 @@ bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in clien
             std::this_thread::sleep_for(std::chrono::milliseconds(timeout_ms));
             // check
             if(fm->check_f(index) == false) {
-                logger.log(DEBUG, "finish time ack");
+                // logger.log(DEBUG, "finish time ack");
                 fm->delete_f(index);
                 return 0;
             }
@@ -78,5 +78,5 @@ bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in clien
 
 
 void COAPServer::data_handler(COAPMessage msg, sockaddr_in client_addr) {
-    logger.log(DEBUG, "data handler");
+    // logger.log(DEBUG, "data handler");
 }

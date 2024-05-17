@@ -5,7 +5,7 @@
 #include "UDPServer.h"
 #include "Log.h"
 
-// static Logger& logger = Logger::get_instance();
+static Logger& logger = Logger::get_instance();
 
 
 UDPServer::UDPServer(uint16_t port) : ThreadPool(4) {
@@ -30,7 +30,7 @@ UDPServer::UDPServer(uint16_t port) : ThreadPool(4) {
 }
 
 void UDPServer::receive_handler(const char* data, ssize_t size, sockaddr_in clinet_addr) {
-    logger.log(DEBUG, "virtual function");
+    // logger.log(DEBUG, "virtual function");
 }
 
 void UDPServer::run() {

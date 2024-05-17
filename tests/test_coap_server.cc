@@ -1,6 +1,8 @@
 #include "CoAPServer.h"
 #include "coap.h"
 
+static Logger& logger = Logger::get_instance();
+
 class MyServer: public COAPServer {
 public:
     MyServer(): COAPServer(8888) {}
