@@ -25,7 +25,13 @@ public:
 };
 
 int main() {
+<<<<<<< HEAD
     MyServer ms = MyServer();
     ms.run();
     return 0;
 }
+=======
+    COAPServer cs = COAPServer(8888);
+    cs.run();
+}
+>>>>>>> cb1eb1c268cddcedb00aba60888b603433849bbe
