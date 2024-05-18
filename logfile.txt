@@ -6,3 +6,175 @@
 [2024-05-17 16:32:27][INFO    ]: [Receive] [From -> 127.0.0.1:3879] { Message ID: 4369 Type: NON }
 [2024-05-17 16:32:27][INFO    ]: [Receive] [From -> 127.0.0.1:3879] { Message ID: 4370 Type: CON }
 [2024-05-17 16:32:27][INFO    ]: [Send   ] [To   -> 127.0.0.1:3879] { Message ID: 4370 Type: ACK }
+[2024-05-17 22:37:08][DEBUG   ]:     
+[2024-05-17 22:37:08][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:11][DEBUG   ]:     
+[2024-05-17 22:37:11][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:12][DEBUG   ]:     
+[2024-05-17 22:37:12][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:14][DEBUG   ]:     
+[2024-05-17 22:37:14][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:14][DEBUG   ]:     
+[2024-05-17 22:37:14][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:20][DEBUG   ]:     
+[2024-05-17 22:37:20][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:20][DEBUG   ]:     
+[2024-05-17 22:37:20][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:20][DEBUG   ]:     
+[2024-05-17 22:37:20][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:21][DEBUG   ]:     
+[2024-05-17 22:37:21][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:21][DEBUG   ]:     
+[2024-05-17 22:37:21][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:22][DEBUG   ]:     
+[2024-05-17 22:37:22][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:22][DEBUG   ]:     
+[2024-05-17 22:37:22][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:22][DEBUG   ]:     
+[2024-05-17 22:37:22][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:23][DEBUG   ]:     
+[2024-05-17 22:37:23][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:23][DEBUG   ]:     
+[2024-05-17 22:37:23][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:24][DEBUG   ]:     
+[2024-05-17 22:37:24][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:24][DEBUG   ]:     
+[2024-05-17 22:37:24][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:24][DEBUG   ]:     
+[2024-05-17 22:37:24][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:25][DEBUG   ]:     
+[2024-05-17 22:37:25][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:25][DEBUG   ]:     
+[2024-05-17 22:37:25][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:25][DEBUG   ]:     
+[2024-05-17 22:37:25][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:26][DEBUG   ]:     
+[2024-05-17 22:37:26][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:26][DEBUG   ]:     
+[2024-05-17 22:37:26][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:26][DEBUG   ]:     
+[2024-05-17 22:37:26][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:27][DEBUG   ]:     
+[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:27][DEBUG   ]:     
+[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:27][DEBUG   ]:     
+[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:27][DEBUG   ]:     
+[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:28][DEBUG   ]:     
+[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:28][DEBUG   ]:     
+[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:28][DEBUG   ]:     
+[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:28][DEBUG   ]:     
+[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:29][DEBUG   ]:     
+[2024-05-17 22:37:29][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:29][DEBUG   ]:     
+[2024-05-17 22:37:29][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:30][DEBUG   ]:     
+[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:31][DEBUG   ]:     
+[2024-05-17 22:37:31][DEBUG   ]: send 'hello client' to client
+[2024-05-17 22:37:31][DEBUG   ]:     
+[2024-05-17 22:37:31][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:16][DEBUG   ]:     
+[2024-05-18 17:20:16][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:17][DEBUG   ]:     
+[2024-05-18 17:20:17][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:18][DEBUG   ]:     
+[2024-05-18 17:20:18][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:19][DEBUG   ]:     
+[2024-05-18 17:20:19][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:19][DEBUG   ]:     
+[2024-05-18 17:20:19][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:20][DEBUG   ]:     
+[2024-05-18 17:20:20][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:25][DEBUG   ]:     
+[2024-05-18 17:20:25][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:25][DEBUG   ]:     
+[2024-05-18 17:20:25][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:26][DEBUG   ]:     
+[2024-05-18 17:20:26][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:26][DEBUG   ]:     
+[2024-05-18 17:20:26][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:27][DEBUG   ]:     
+[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:27][DEBUG   ]:     
+[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:27][DEBUG   ]:     
+[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:27][DEBUG   ]:     
+[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:27][DEBUG   ]:     
+[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:27][DEBUG   ]:     
+[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:28][DEBUG   ]:     
+[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:28][DEBUG   ]:     
+[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:28][DEBUG   ]:     
+[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:28][DEBUG   ]:     
+[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:28][DEBUG   ]:     
+[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:28][DEBUG   ]:     
+[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:29][DEBUG   ]:     
+[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:29][DEBUG   ]:     
+[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:29][DEBUG   ]:     
+[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:29][DEBUG   ]:     
+[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:29][DEBUG   ]:     
+[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:30][DEBUG   ]:     
+[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:30][DEBUG   ]:     
+[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:30][DEBUG   ]:     
+[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:30][DEBUG   ]:     
+[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:31][DEBUG   ]:     
+[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:31][DEBUG   ]:     
+[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:31][DEBUG   ]:     
+[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:31][DEBUG   ]:     
+[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:32][DEBUG   ]:     
+[2024-05-18 17:20:32][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:32][DEBUG   ]:     
+[2024-05-18 17:20:32][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:33][DEBUG   ]:     
+[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:33][DEBUG   ]:     
+[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:33][DEBUG   ]:     
+[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:33][DEBUG   ]:     
+[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:34][DEBUG   ]:     
+[2024-05-18 17:20:34][DEBUG   ]: send 'hello client' to client
+[2024-05-18 17:20:34][DEBUG   ]:     
+[2024-05-18 17:20:34][DEBUG   ]: send 'hello client' to client
