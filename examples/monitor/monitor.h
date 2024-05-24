@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 typedef struct sensor_t {
+    int device;
     int temperature;
     int humidity;
 }sensor_t;

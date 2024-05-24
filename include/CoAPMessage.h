@@ -95,6 +95,8 @@ public:
     uint16_t get_msgid() { return m_message_id;}
     ssize_t get_data_size() { return m_payload_size;}
     char* get_data() {return (char*)&m_payload[0];}
+    std::string get_uri_path() { return m_uri_path;}
+    COAPMessage::Code get_code() {return m_code;}
 private:
     uint8_t m_version;
     Type m_type;
@@ -106,6 +108,7 @@ private:
     ssize_t m_payload_size;
     std::vector<uint8_t> m_payload;
     ssize_t m_length;
+    std::string m_uri_path;
 };
 
 #endif

@@ -19,7 +19,6 @@ public:
 
     uint16_t get_msgid() { return msg_id++;}
     bool sendError(sockaddr_in clinet_addr);
-    bool sendMessage();
 protected:
     virtual void receive_handler(const char* data, ssize_t size, sockaddr_in client_addr) override;
     virtual void data_handler(COAPMessage msg, sockaddr_in client_addr);

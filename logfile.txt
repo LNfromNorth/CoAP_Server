@@ -1,242 +1,35 @@
-<<<<<<< HEAD
-[2024-05-17 16:32:27][DEBUG   ]: =========== init socket ============
-[2024-05-17 16:32:27][DEBUG   ]: =========== send NON ===============
-[2024-05-17 16:32:27][DEBUG   ]: send message id is 4369
-[2024-05-17 16:32:27][DEBUG   ]: =========== send CON ===============
-[2024-05-17 16:32:27][DEBUG   ]: send message id is 4370
-[2024-05-17 16:32:27][INFO    ]: [Receive] [From -> 127.0.0.1:3879] { Message ID: 4369 Type: NON }
-[2024-05-17 16:32:27][INFO    ]: [Receive] [From -> 127.0.0.1:3879] { Message ID: 4370 Type: CON }
-[2024-05-17 16:32:27][INFO    ]: [Send   ] [To   -> 127.0.0.1:3879] { Message ID: 4370 Type: ACK }
-[2024-05-17 22:37:08][DEBUG   ]:     
-[2024-05-17 22:37:08][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:11][DEBUG   ]:     
-[2024-05-17 22:37:11][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:12][DEBUG   ]:     
-[2024-05-17 22:37:12][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:14][DEBUG   ]:     
-[2024-05-17 22:37:14][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:14][DEBUG   ]:     
-[2024-05-17 22:37:14][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:20][DEBUG   ]:     
-[2024-05-17 22:37:20][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:20][DEBUG   ]:     
-[2024-05-17 22:37:20][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:20][DEBUG   ]:     
-[2024-05-17 22:37:20][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:21][DEBUG   ]:     
-[2024-05-17 22:37:21][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:21][DEBUG   ]:     
-[2024-05-17 22:37:21][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:22][DEBUG   ]:     
-[2024-05-17 22:37:22][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:22][DEBUG   ]:     
-[2024-05-17 22:37:22][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:22][DEBUG   ]:     
-[2024-05-17 22:37:22][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:23][DEBUG   ]:     
-[2024-05-17 22:37:23][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:23][DEBUG   ]:     
-[2024-05-17 22:37:23][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:24][DEBUG   ]:     
-[2024-05-17 22:37:24][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:24][DEBUG   ]:     
-[2024-05-17 22:37:24][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:24][DEBUG   ]:     
-[2024-05-17 22:37:24][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:25][DEBUG   ]:     
-[2024-05-17 22:37:25][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:25][DEBUG   ]:     
-[2024-05-17 22:37:25][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:25][DEBUG   ]:     
-[2024-05-17 22:37:25][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:26][DEBUG   ]:     
-[2024-05-17 22:37:26][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:26][DEBUG   ]:     
-[2024-05-17 22:37:26][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:26][DEBUG   ]:     
-[2024-05-17 22:37:26][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:27][DEBUG   ]:     
-[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:27][DEBUG   ]:     
-[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:27][DEBUG   ]:     
-[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:27][DEBUG   ]:     
-[2024-05-17 22:37:27][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:28][DEBUG   ]:     
-[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:28][DEBUG   ]:     
-[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:28][DEBUG   ]:     
-[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:28][DEBUG   ]:     
-[2024-05-17 22:37:28][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:29][DEBUG   ]:     
-[2024-05-17 22:37:29][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:29][DEBUG   ]:     
-[2024-05-17 22:37:29][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:30][DEBUG   ]:     
-[2024-05-17 22:37:30][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:31][DEBUG   ]:     
-[2024-05-17 22:37:31][DEBUG   ]: send 'hello client' to client
-[2024-05-17 22:37:31][DEBUG   ]:     
-[2024-05-17 22:37:31][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:16][DEBUG   ]:     
-[2024-05-18 17:20:16][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:17][DEBUG   ]:     
-[2024-05-18 17:20:17][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:18][DEBUG   ]:     
-[2024-05-18 17:20:18][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:19][DEBUG   ]:     
-[2024-05-18 17:20:19][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:19][DEBUG   ]:     
-[2024-05-18 17:20:19][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:20][DEBUG   ]:     
-[2024-05-18 17:20:20][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:25][DEBUG   ]:     
-[2024-05-18 17:20:25][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:25][DEBUG   ]:     
-[2024-05-18 17:20:25][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:26][DEBUG   ]:     
-[2024-05-18 17:20:26][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:26][DEBUG   ]:     
-[2024-05-18 17:20:26][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:27][DEBUG   ]:     
-[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:27][DEBUG   ]:     
-[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:27][DEBUG   ]:     
-[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:27][DEBUG   ]:     
-[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:27][DEBUG   ]:     
-[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:27][DEBUG   ]:     
-[2024-05-18 17:20:27][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:28][DEBUG   ]:     
-[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:28][DEBUG   ]:     
-[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:28][DEBUG   ]:     
-[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:28][DEBUG   ]:     
-[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:28][DEBUG   ]:     
-[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:28][DEBUG   ]:     
-[2024-05-18 17:20:28][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:29][DEBUG   ]:     
-[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:29][DEBUG   ]:     
-[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:29][DEBUG   ]:     
-[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:29][DEBUG   ]:     
-[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:29][DEBUG   ]:     
-[2024-05-18 17:20:29][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:30][DEBUG   ]:     
-[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:30][DEBUG   ]:     
-[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:30][DEBUG   ]:     
-[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:30][DEBUG   ]:     
-[2024-05-18 17:20:30][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:31][DEBUG   ]:     
-[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:31][DEBUG   ]:     
-[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:31][DEBUG   ]:     
-[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:31][DEBUG   ]:     
-[2024-05-18 17:20:31][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:32][DEBUG   ]:     
-[2024-05-18 17:20:32][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:32][DEBUG   ]:     
-[2024-05-18 17:20:32][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:33][DEBUG   ]:     
-[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:33][DEBUG   ]:     
-[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:33][DEBUG   ]:     
-[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:33][DEBUG   ]:     
-[2024-05-18 17:20:33][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:34][DEBUG   ]:     
-[2024-05-18 17:20:34][DEBUG   ]: send 'hello client' to client
-[2024-05-18 17:20:34][DEBUG   ]:     
-[2024-05-18 17:20:34][DEBUG   ]: send 'hello client' to client
-=======
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: is CON
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:40][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:28:40][DEBUG   ]: into data_handler
-[2024-05-15 16:28:40][DEBUG   ]: set in new thread
-[2024-05-15 16:28:48][DEBUG   ]: is CON
-[2024-05-15 16:28:48][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:28:48][DEBUG   ]: into data_handler
-[2024-05-15 16:28:48][DEBUG   ]: set in new thread
-[2024-05-15 16:29:36][DEBUG   ]: is CON
-[2024-05-15 16:29:36][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:29:36][DEBUG   ]: into data_handler
-[2024-05-15 16:29:36][DEBUG   ]: set in new thread
-[2024-05-15 16:32:31][DEBUG   ]: is CON
-[2024-05-15 16:32:31][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:32:31][DEBUG   ]: into data_handler
-[2024-05-15 16:32:31][DEBUG   ]: set in new thread
-[2024-05-15 16:34:26][DEBUG   ]: is CON
-[2024-05-15 16:34:26][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:34:26][DEBUG   ]: into data_handler
-[2024-05-15 16:34:26][DEBUG   ]: set in new thread
-[2024-05-15 16:35:47][DEBUG   ]: is CON
-[2024-05-15 16:35:47][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:35:47][DEBUG   ]: into data_handler
-[2024-05-15 16:35:47][DEBUG   ]: set in new thread
-[2024-05-15 16:37:53][DEBUG   ]: is CON
-[2024-05-15 16:37:53][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:37:53][DEBUG   ]: into data_handler
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: set in new thread
-[2024-05-15 16:38:06][DEBUG   ]: is CON
-[2024-05-15 16:38:06][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:38:06][DEBUG   ]: into data_handler
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:39:24][DEBUG   ]: is CON
-[2024-05-15 16:39:24][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:39:24][DEBUG   ]: into data_handler
-[2024-05-15 16:39:24][DEBUG   ]: set in new thread
-[2024-05-15 16:43:31][DEBUG   ]: is CON
-[2024-05-15 16:43:31][DEBUG   ]: ============ ack ==============
-[2024-05-15 16:43:31][DEBUG   ]: into data_handler
-[2024-05-15 16:43:31][DEBUG   ]: set in new thread
->>>>>>> cb1eb1c268cddcedb00aba60888b603433849bbe
+[2024-05-24 21:10:08][DEBUG   ]: receive new message
+[2024-05-24 21:10:08][DEBUG   ]: message type is CON
+[2024-05-24 21:10:08][DEBUG   ]: message id is 54905
+[2024-05-24 21:28:47][DEBUG   ]: receive new message
+[2024-05-24 21:28:47][DEBUG   ]: message type is CON
+[2024-05-24 21:28:47][DEBUG   ]: message id is 59100
+[2024-05-24 21:31:44][INFO    ]: [Receive from 127.0.0.1:13776]
+[2024-05-24 21:31:47][INFO    ]: [Receive from 127.0.0.1:13776]
+[2024-05-24 21:31:52][INFO    ]: [Receive from 127.0.0.1:13776]
+[2024-05-24 21:32:49][INFO    ]: [Receive from 127.0.0.1:42413]
+[2024-05-24 21:32:51][INFO    ]: [Receive from 127.0.0.1:42413]
+[2024-05-24 21:32:57][INFO    ]: [Receive from 127.0.0.1:42413]
+[2024-05-24 21:33:07][INFO    ]: [Receive from 127.0.0.1:42413]
+[2024-05-24 21:33:25][INFO    ]: [Receive from 127.0.0.1:53148]
+[2024-05-24 21:33:28][INFO    ]: [Receive from 127.0.0.1:53148]
+[2024-05-24 21:33:33][INFO    ]: [Receive from 127.0.0.1:53148]
+[2024-05-24 21:33:45][INFO    ]: [Receive from 127.0.0.1:53148]
+[2024-05-24 21:34:08][INFO    ]: [Receive from 127.0.0.1:53148]
+[2024-05-24 21:48:44][INFO    ]: [Receive from 127.0.0.1:51940][Request: @T¶]
+[2024-05-24 21:49:31][INFO    ]: [Receive from 127.0.0.1:36060][Request: @âS¶]
+[2024-05-24 21:53:31][INFO    ]: [Receive from 127.0.0.1:50103][Request: POST]
+[2024-05-24 21:53:41][INFO    ]: [Receive from 127.0.0.1:24200][Request: GET]
+[2024-05-24 21:54:00][INFO    ]: [Receive from 127.0.0.1:38828][Request: PUT]
+[2024-05-24 21:54:03][INFO    ]: [Receive from 127.0.0.1:28560][Request: GET]
+[2024-05-24 21:54:17][INFO    ]: [Receive from 127.0.0.1:34007][Request: DELETE]
+[2024-05-24 21:54:27][INFO    ]: [Receive from 127.0.0.1:30622][Request: GET]
+[2024-05-24 22:10:05][INFO    ]: [Receive from 127.0.0.1:46764][Request: POST]
+[2024-05-24 22:15:20][INFO    ]: [Receive from 127.0.0.1:5064][Request: GET]
+[2024-05-24 22:19:32][INFO    ]: [Receive from 127.0.0.1:43936][Request: PUT]
+[2024-05-24 22:19:36][INFO    ]: [Receive from 127.0.0.1:28092][Request: GET]
+[2024-05-24 22:22:47][INFO    ]: [Receive from 127.0.0.1:48783][Request: DELETE]
+[2024-05-24 22:22:56][INFO    ]: [Receive from 127.0.0.1:49075][Request: DELETE]
+[2024-05-24 22:23:10][INFO    ]: [Receive from 127.0.0.1:62613][Request: POST]
+[2024-05-24 22:23:18][INFO    ]: [Receive from 127.0.0.1:37352][Request: DELETE]
+[2024-05-24 22:23:23][INFO    ]: [Receive from 127.0.0.1:51148][Request: GET]

@@ -55,7 +55,7 @@ void COAPServer::ack_received(COAPMessage msg_in) {
 
 
 bool COAPServer::sendMessage_with_timeout(COAPMessage msg_out, sockaddr_in client_addr) {
-    int timeout_ms = 1000;
+    int timeout_ms = 2000;
     int index = fm->alloc_f(msg_out.get_msgid());
     // logger.log(DEBUG, "add time ack");
     // sendMessage(msg_out, client_addr);

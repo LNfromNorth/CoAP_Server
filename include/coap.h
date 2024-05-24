@@ -6,5 +6,6 @@
 #include "config.h"
 #include "CoAPServer.h"
 #include "CoAPMessage.h"
+#include "Resource.h"
 
 #endif

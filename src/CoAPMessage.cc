@@ -22,7 +22,7 @@ bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
 
     // 解析 CoAP 消息头
     m_version = (buffer[0] >> 6) & 0x03;
-    if(m_version != 0b01) {
+    if (m_version != 0b01) {
         logger.log(ERROR, "get the wrong version of message");
         return false;
     }
@@ -33,7 +33,7 @@ bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
     m_message_id = (buffer[2] << 8) | buffer[3];
 
     // 解析 Token
-    if(m_token_length > 0) {
+    if (m_token_length > 0) {
         if (buffer.size() < (size_t)(4 + m_token_length)) {
             logger.log(ERROR, "Invalid CoAP message: token length mismatch");
             return false;
@@ -43,58 +43,145 @@ bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
 
     // 解析 Options
     size_t option_index = 4 + m_token_length;
-    while(option_index < buffer.size()) {
-        uint16_t option_delta = ((buffer[option_index] >> 4) & 0x0F);
-        uint16_t option_length = buffer[option_index] & 0x0F;
+    uint16_t running_delta = 0;
 
-        if((option_delta == 15) && (option_length == 15)) {
+    while (option_index < buffer.size()) {
+        uint8_t option_header = buffer[option_index];
+        uint16_t option_delta = (option_header >> 4) & 0x0F;
+        uint16_t option_length = option_header & 0x0F;
+
+        if ((option_delta == 15) && (option_length == 15)) {
             break;
         }
 
-        if((option_delta == 15) || (option_length == 15)) {
-            logger.log(ERROR, "get the wrong option message");
-            return false;
-        }
+        option_index++;
 
-        if ((uint16_t)option_delta == 13) {
-            option_delta = (buffer[option_index + 1] + 13);
-            option_index += 1;
+        if (option_delta == 13) {
+            option_delta = 13 + buffer[option_index];
+            option_index++;
         } else if (option_delta == 14) {
-            option_delta = (buffer[option_index + 1] << 8) + buffer[option_index + 2] + 269;
+            option_delta = 269 + (buffer[option_index] << 8) + buffer[option_index + 1];
             option_index += 2;
         }
 
         if (option_length == 13) {
-            option_length = buffer[option_index + 1] + 13;
-            option_index += 1;
+            option_length = 13 + buffer[option_index];
+            option_index++;
         } else if (option_length == 14) {
-            option_length = (buffer[option_index + 1] << 8) + buffer[option_index + 2] + 269;
+            option_length = 269 + (buffer[option_index] << 8) + buffer[option_index + 1];
             option_index += 2;
         }
 
-        std::vector<uint8_t> option_value(buffer.begin() + option_index + 1, buffer.begin() + option_index + 1 + option_length);
-        m_options[option_delta] = option_value;
+        running_delta += option_delta;
 
-        option_index += 1 + option_length;
-    }
+        std::vector<uint8_t> option_value(buffer.begin() + option_index, buffer.begin() + option_index + option_length);
+        option_index += option_length;
 
-    if(buffer.size() > option_index) {
-        if(buffer[option_index] != 0xff) {
-            logger.log(ERROR, "get the wrong message format");
-            return false;
+        // 处理 Uri-Path 选项
+        if (running_delta == 11) { // Uri-Path 的 Delta 值为 11
+            std::string path_segment(option_value.begin(), option_value.end());
+            m_uri_path += "/" + path_segment;
         }
+
+        // 存储所有选项，无论是否为 Uri-Path
+        m_options[running_delta] = option_value;
     }
 
-    option_index++;
-
-    // 解析 Payload
-    m_payload_size = buffer.size() - option_index;
-    if (option_index < buffer.size()) {
-        m_payload.assign(buffer.begin() + option_index, buffer.end());
+    // 处理 Payload
+    if (option_index < buffer.size() && buffer[option_index] == 0xFF) {
+        option_index++;
+        m_payload_size = buffer.size() - option_index;
+        if (option_index < buffer.size()) {
+            m_payload.assign(buffer.begin() + option_index, buffer.end());
+        }
+    } else {
+        m_payload_size = 0;
     }
 
     return true;
 }
+
+// bool COAPMessage::parse(const std::vector<uint8_t>& buffer) {
+//     if (buffer.size() < 4) {
+//         logger.log(ERROR, "Invalid CoAP message size");
+//         return false;
+//     }
+
+//     // 解析 CoAP 消息头
+//     m_version = (buffer[0] >> 6) & 0x03;
+//     if(m_version != 0b01) {
+//         logger.log(ERROR, "get the wrong version of message");
+//         return false;
+//     }
+
+//     m_type = static_cast<Type>((buffer[0] >> 4) & 0x03);
+//     m_token_length = buffer[0] & 0x0F;
+//     m_code = static_cast<Code>(buffer[1]);
+//     m_message_id = (buffer[2] << 8) | buffer[3];
+
+//     // 解析 Token
+//     if(m_token_length > 0) {
+//         if (buffer.size() < (size_t)(4 + m_token_length)) {
+//             logger.log(ERROR, "Invalid CoAP message: token length mismatch");
+//             return false;
+//         }
+//         m_token.assign(buffer.begin() + 4, buffer.begin() + 4 + m_token_length);
+//     }
+
+//     // 解析 Options
+//     size_t option_index = 4 + m_token_length;
+//     while(option_index < buffer.size()) {
+//         uint16_t option_delta = ((buffer[option_index] >> 4) & 0x0F);
+//         uint16_t option_length = buffer[option_index] & 0x0F;
+
+//         if((option_delta == 15) && (option_length == 15)) {
+//             break;
+//         }
+
+//         if((option_delta == 15) || (option_length == 15)) {
+//             logger.log(ERROR, "get the wrong option message");
+//             return false;
+//         }
+
+//         if ((uint16_t)option_delta == 13) {
+//             option_delta = (buffer[option_index + 1] + 13);
+//             option_index += 1;
+//         } else if (option_delta == 14) {
+//             option_delta = (buffer[option_index + 1] << 8) + buffer[option_index + 2] + 269;
+//             option_index += 2;
+//         }
+
+//         if (option_length == 13) {
+//             option_length = buffer[option_index + 1] + 13;
+//             option_index += 1;
+//         } else if (option_length == 14) {
+//             option_length = (buffer[option_index + 1] << 8) + buffer[option_index + 2] + 269;
+//             option_index += 2;
+//         }
+
+//         std::vector<uint8_t> option_value(buffer.begin() + option_index + 1, buffer.begin() + option_index + 1 + option_length);
+//         m_options[option_delta] = option_value;
+
+//         option_index += 1 + option_length;
+//     }
+
+//     if(buffer.size() > option_index) {
+//         if(buffer[option_index] != 0xff) {
+//             logger.log(ERROR, "get the wrong message format");
+//             return false;
+//         }
+//     }
+
+//     option_index++;
+
+//     // 解析 Payload
+//     m_payload_size = buffer.size() - option_index;
+//     if (option_index < buffer.size()) {
+//         m_payload.assign(buffer.begin() + option_index, buffer.end());
+//     }
+
+//     return true;
+// }
 
 void COAPMessage::make(Type type, char* token, size_t token_length, 
             Code code, uint16_t message_id, uint8_t* data, ssize_t data_size) {
@@ -225,7 +312,8 @@ void COAPMessage::print() {
         std::cout << "  Option Delta: " << (int)static_cast<int>(option.first) << std::endl;
         std::cout << "  Option Value: ";
         for (uint8_t byte : option.second) {
-            std::cout << std::hex << static_cast<int>(byte) << " ";
+            std::cout << (char)byte;
+            // std::cout << std::hex << static_cast<int>(byte) << " ";
         }
         std::cout << std::endl;
     }
