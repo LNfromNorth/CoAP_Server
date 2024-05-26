@@ -24,10 +24,15 @@ public:
 
         // msg.print();
         // msg_out
+        std::cout << path << std::endl;
         COAPMessage msg_out = COAPMessage();
         std::string request_str;
         if(request == COAPMessage::Code::GET) {
-            ret_msg = rs.getResource(path);
+            if (path == "/.well-known/core") {
+                ret_msg = rs.getCoreResources();
+            } else {
+                ret_msg = rs.getResource(path);
+            }
             request_str = "GET";
             msg_out.make(COAPMessage::Type::ACK, msg.get_token(), msg.get_tokenl(),
                         COAPMessage::Code::Valid, msg.get_msgid(), (uint8_t*)ret_msg.c_str(), 

@@ -43,6 +43,19 @@ private:
         return currentNode->children[lastPart];
     }
 
+    // 辅助函数：递归构建资源发现的链接格式字符串
+    void buildCoreLinkFormat(ResourceNode* node, const std::string& path, std::string& output) {
+        if (!node) {
+            return;
+        }
+
+        for (const auto& child : node->children) {
+            std::string childPath = path + "/" + child.second->name;
+            output += "<" + childPath + ">;rt=\"resource\";if=\"core\",";
+            buildCoreLinkFormat(child.second, childPath, output);
+        }
+    }
+
 public:
     ResourceManager() {
         root = new ResourceNode("root");
@@ -113,6 +126,18 @@ public:
         }
         return 1;
     }
+
+    // 生成资源发现的响应内容
+    std::string getCoreResources() {
+        std::string output;
+        buildCoreLinkFormat(root, "", output);
+        // 删除最后一个逗号
+        if (!output.empty() && output.back() == ',') {
+            output.pop_back();
+        }
+        return output;
+    }
+    
 };
 
 
